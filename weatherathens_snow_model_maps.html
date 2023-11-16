@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK7GXEKP2L"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DK7GXEKP2L');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/weatherathens_snow_model_maps.css" />
+
+    <!-- Add Lightbox CSS and JS links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-7R0Z7fPpp3zPFJrLkxK+xu23x/AXxGGN+9p0K0LuZ0U7nOD/YkVuOrRNDXR6YFjFv5MQM1vluZu8ayK+fFTp5A==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-DFmqJOpjCry1F5LMz5ijbFpB9NIn1DuK4L1gT+GThN5haFJR8mX/brmQCaDFV2c5fWg0Qe7fUpC5vIhEu0lZEw==" crossorigin="anonymous" defer></script>
+
+    <title>Weatherathens Snow Forecasting Model</title>
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" class="title">Giannis Dravilas</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="thesis.html">Thesis</a></li>
+                <li><a href="snow_forecasting_model.html" class="active">Snow Forecasting Model</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Weatherathens Snow Forecasting Model</h1>
+
+    <div>
+    <label for="domain">Select Domain:</label>
+    <select id="domain" onchange="updateImages()">
+        <option value="greece">Greece</option>
+        <option value="central_greece">Central Greece</option>
+        <option value="attica">Attica</option>
+    </select>
+    </div>
+
+    <button onclick="changeDay(-1)" id="previousDayBtn" disabled>-1 Day</button>
+    <button onclick="changeDay(1)" id="nextDayBtn" disabled>+1 Day</button>
+
+    <div id="image-container"></div>
+
+    <script>
+        var currentDay = 0;
+
+        function showImages(day) {
+            var domain = document.getElementById("domain").value;
+
+            var imageContainer = document.getElementById("image-container");
+            imageContainer.innerHTML = ""; // Clear previous images
+
+            var imagePaths = [
+                `https://snow-model.neocities.org/gfs/accum_snowfall_${domain}_day_${day}_gfs.png`,
+                `https://snow-model.neocities.org/icon-eu/accum_snowfall_${domain}_day_${day}_icon-eu.png`,
+                `https://snow-model.neocities.org/gem/accum_snowfall_${domain}_day_${day}_gem.png`,
+            ];
+
+            imagePaths.forEach(function (path, index) {
+                var wrapper = document.createElement("div");
+                wrapper.className = "image-wrapper";
+
+                var a = document.createElement("a");
+                a.setAttribute("href", path);
+                a.setAttribute("data-lightbox", "images");
+
+                var img = document.createElement("img");
+                img.src = path;
+                img.alt = "Snow Model Images";
+
+                var text = document.createElement("div");
+                text.className = "image-text";
+                text.textContent = `Daily Snowfall for Day ${day} using ${['ICON-EU', 'GFS', 'GEM'][index]} data`;
+
+                a.appendChild(img);
+                wrapper.appendChild(a);
+                wrapper.appendChild(text);
+
+                imageContainer.appendChild(wrapper);
+            });
+
+            enableButtons(); // Enable buttons immediately after updating images
+        }
+
+        function updateImages() {
+            showImages(currentDay);
+        }
+
+        function changeDay(delta) {
+            currentDay += delta;
+            if (currentDay < 0) {
+                currentDay = 3;
+            } else if (currentDay > 3) {
+                currentDay = 0;
+            }
+
+            showImages(currentDay);
+        }
+
+        function enableButtons() {
+            document.getElementById("previousDayBtn").disabled = false;
+            document.getElementById("nextDayBtn").disabled = false;
+        }
+
+        // Display day 0 maps by default when the page is opened
+        window.onload = function() {
+            showImages(0);
+        };
+    </script>
+
+    <br>
+    <p style="text-align:left; font-size:14px">The Snow Forecasting Model is an innovative, ultra-high resolution snowfall prediction system designed
+        specifically for Greece by <a href="https://www.linkedin.com/in/giannis-dravilas/">Giannis Dravilas</a>. With a spatial
+        resolution of 400 meters, this model revolutionizes snowfall forecasting, covering every corner of Greece and even extending
+        beyond its borders. More information is available <a href="snow_forecasting_model.html">here</a>.</p>
+
+</body>
+</html>
