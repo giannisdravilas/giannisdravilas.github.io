@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK7GXEKP2L"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-DK7GXEKP2L');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DK7GXEKP2L');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +20,12 @@
     <link rel="stylesheet" href="assets/css/weatherathens_snow_model_maps.css" />
 
     <!-- Add Lightbox CSS and JS links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-7R0Z7fPpp3zPFJrLkxK+xu23x/AXxGGN+9p0K0LuZ0U7nOD/YkVuOrRNDXR6YFjFv5MQM1vluZu8ayK+fFTp5A==" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-DFmqJOpjCry1F5LMz5ijbFpB9NIn1DuK4L1gT+GThN5haFJR8mX/brmQCaDFV2c5fWg0Qe7fUpC5vIhEu0lZEw==" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+        integrity="sha512-7R0Z7fPpp3zPFJrLkxK+xu23x/AXxGGN+9p0K0LuZ0U7nOD/YkVuOrRNDXR6YFjFv5MQM1vluZu8ayK+fFTp5A=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+        integrity="sha512-DFmqJOpjCry1F5LMz5ijbFpB9NIn1DuK4L1gT+GThN5haFJR8mX/brmQCaDFV2c5fWg0Qe7fUpC5vIhEu0lZEw=="
+        crossorigin="anonymous" defer></script>
 
     <title>Weatherathens Snow Forecasting Model</title>
 </head>
@@ -36,16 +44,21 @@
     <h1>Weatherathens Snow Forecasting Model</h1>
 
     <div>
-    <label for="domain">Select Domain:</label>
-    <select id="domain" onchange="updateImages()">
-        <option value="greece">Greece</option>
-        <option value="central_greece">Central Greece</option>
-        <option value="attica">Attica</option>
-    </select>
+        <label for="domain">Select Domain:</label>
+        <select id="domain" onchange="updateImages()">
+            <option value="greece">Greece</option>
+            <option value="central_greece">Central Greece</option>
+            <option value="attica">Attica</option>
+        </select>
     </div>
 
-    <button onclick="changeDay(-1)" id="previousDayBtn" disabled>-1 Day</button>
-    <button onclick="changeDay(1)" id="nextDayBtn" disabled>+1 Day</button>
+    <div id="dayButtons">
+        <!-- Buttons for each day ahead -->
+        <button onmouseover="showImages(0)" id="dayBtn0">Day 0</button>
+        <button onmouseover="showImages(1)" id="dayBtn1">Day 1</button>
+        <button onmouseover="showImages(2)" id="dayBtn2">Day 2</button>
+        <button onmouseover="showImages(3)" id="dayBtn3">Day 3</button>
+    </div>
 
     <div id="image-container"></div>
 
@@ -53,6 +66,8 @@
         var currentDay = 0;
 
         function showImages(day) {
+            currentDay = day; // Update the current day
+
             var domain = document.getElementById("domain").value;
 
             var imageContainer = document.getElementById("image-container");
@@ -91,27 +106,19 @@
         }
 
         function updateImages() {
-            showImages(currentDay);
-        }
-
-        function changeDay(delta) {
-            currentDay += delta;
-            if (currentDay < 0) {
-                currentDay = 3;
-            } else if (currentDay > 3) {
-                currentDay = 0;
-            }
-
+            // Display images for the current day when the domain is changed
             showImages(currentDay);
         }
 
         function enableButtons() {
-            document.getElementById("previousDayBtn").disabled = false;
-            document.getElementById("nextDayBtn").disabled = false;
+            document.getElementById("dayBtn0").disabled = false;
+            document.getElementById("dayBtn1").disabled = false;
+            document.getElementById("dayBtn2").disabled = false;
+            document.getElementById("dayBtn3").disabled = false;
         }
 
         // Display day 0 maps by default when the page is opened
-        window.onload = function() {
+        window.onload = function () {
             showImages(0);
         };
     </script>
@@ -179,10 +186,12 @@
     </table>
 
     <br>
-    <p style="text-align:left; font-size:14px">The Snow Forecasting Model is an innovative, ultra-high resolution snowfall prediction system designed
-        specifically for Greece, by <a href="https://www.linkedin.com/in/giannis-dravilas/">Giannis Dravilas</a>. With a spatial
-        resolution of 400 meters, this model revolutionizes snowfall forecasting, covering every corner of Greece and even extending
-        beyond its borders. More information is available <a href="snow_forecasting_model.html">here</a>.</p>
+    <p style="text-align:left; font-size:14px">The Snow Forecasting Model is an innovative, ultra-high resolution snowfall
+        prediction system designed specifically for Greece, by <a
+            href="https://www.linkedin.com/in/giannis-dravilas/">Giannis Dravilas</a>. With a spatial resolution of 400
+        meters, this model revolutionizes snowfall forecasting, covering every corner of Greece and even extending beyond
+        its borders. More information is available <a href="snow_forecasting_model.html">here</a>.</p>
 
 </body>
+
 </html>
