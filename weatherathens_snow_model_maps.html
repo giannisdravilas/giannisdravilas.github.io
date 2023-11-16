@@ -59,8 +59,8 @@
             imageContainer.innerHTML = ""; // Clear previous images
 
             var imagePaths = [
-                `https://snow-model.neocities.org/gfs/accum_snowfall_${domain}_day_${day}_gfs.png`,
                 `https://snow-model.neocities.org/icon-eu/accum_snowfall_${domain}_day_${day}_icon-eu.png`,
+                `https://snow-model.neocities.org/gfs/accum_snowfall_${domain}_day_${day}_gfs.png`,
                 `https://snow-model.neocities.org/gem/accum_snowfall_${domain}_day_${day}_gem.png`,
             ];
 
@@ -115,6 +115,68 @@
             showImages(0);
         };
     </script>
+
+    <br>
+    <p style="text-align:left; font-size:18px"><b>Update Times (UTC):</b></p>
+    <table>
+        <caption>0z:</caption>
+        <tr>
+            <th>Model / Day Ahead</th>
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        <tr>
+            <td>Using ICON-EU</td>
+            <td>03:14</td>
+            <td>03:37</td>
+            <td>03:58</td>
+            <td>04:18</td>
+        </tr>
+        <tr>
+            <td>Using GFS</td>
+            <td>03:52</td>
+            <td>04:05</td>
+            <td>04:23</td>
+            <td>04:37</td>
+        </tr>
+        <tr>
+            <td>Using GEM</td>
+            <td>04:53</td>
+            <td>05:17</td>
+            <td>05:41</td>
+            <td>06:04</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>12z:</caption>
+        <tr>
+            <th>Model / Day Ahead</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        <tr>
+            <td>Using ICON-EU</td>
+            <td>15:14</td>
+            <td>15:39</td>
+            <td>15:58</td>
+        </tr>
+        <tr>
+            <td>Using GFS</td>
+            <td>15:53</td>
+            <td>16:07</td>
+            <td>16:22</td>
+        </tr>
+        <tr>
+            <td>Using GEM</td>
+            <td>16:53</td>
+            <td>17:18</td>
+            <td>17:42</td>
+        </tr>
+    </table>
 
     <br>
     <p style="text-align:left; font-size:14px">The Snow Forecasting Model is an innovative, ultra-high resolution snowfall prediction system designed
