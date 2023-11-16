@@ -68,9 +68,7 @@ button:disabled {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    /* background-color: #5e42a6; */
     cursor: default;
-    /* padding: 1.75em 2em; */
 }
 
     #header > .title {
@@ -122,26 +120,17 @@ button:disabled {
                     #header > nav > ul > li a.active {
                         color: #000000;
                     }
-
-                    @media screen and (max-width: 736px) {
-
-                        #header {
-                            padding: 1em 2em;
-                        }
-            
-                    }
             
                     @media screen and (max-width: 480px) {
             
                         #header {
                             display: block;
-                            padding: 0 2em;
                             text-align: left;
                         }
             
                             #header .title {
                                 font-size: 1.25em;
-                                padding: 1em 0;
+                                padding: 0.2em 0;
                             }
             
                             #header > nav {
@@ -150,12 +139,12 @@ button:disabled {
                             }
             
                                 #header > nav > ul > li {
-                                    margin-left: 1.5em;
+                                    margin-left: 0.5em;
                                 }
             
                                     #header > nav > ul > li a {
-                                        height: 6em;
-                                        line-height: 6em;
+                                        height: 1em;
+                                        line-height: 1em;
                                     }
             
                     }
