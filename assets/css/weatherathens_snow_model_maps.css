@@ -162,11 +162,6 @@ button:disabled {
 
 @media screen and (max-width: 736px) {
 
-    #header {
-        padding: 1em 2em;
-        padding-bottom: 50px;
-    }
-    
     .image-text {
         margin-bottom: 15px;
     }
