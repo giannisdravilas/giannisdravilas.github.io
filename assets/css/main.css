@@ -3907,3 +3907,14 @@ input, select, textarea {
 			}
 
 		}
+
+		.actions-container {
+			display: flex;
+			gap: 10px;
+		}
+
+		@media (max-width: 600px) {
+			.actions-container {
+				flex-direction: column;
+			}
+		}
