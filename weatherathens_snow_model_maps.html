@@ -74,9 +74,9 @@
             imageContainer.innerHTML = ""; // Clear previous images
 
             var imagePaths = [
-                `https://snow-model.neocities.org/icon-eu/accum_snowfall_${domain}_day_${day}_icon-eu.png`,
-                `https://snow-model.neocities.org/gfs/accum_snowfall_${domain}_day_${day}_gfs.png`,
-                `https://snow-model.neocities.org/gem/accum_snowfall_${domain}_day_${day}_gem.png`,
+                `https://snow-model.neocities.org/icon-eu-wet-bulb/accum_snowfall_${domain}_day_${day}_icon-eu_wet_bulb_0_76.png`,
+                `https://snow-model.neocities.org/gfs-wet-bulb/accum_snowfall_${domain}_day_${day}_gfs_wet_bulb_0_76.png`,
+                `https://snow-model.neocities.org/gem-wet-bulb/accum_snowfall_${domain}_day_${day}_gem_wet_bulb_0_76.png`,
             ];
 
             imagePaths.forEach(function (path, index) {
@@ -122,6 +122,9 @@
             showImages(0);
         };
     </script>
+
+    <p><strong style="color: red;">Attention:</strong> Starting 25-12-2024 0z, the model has been updated to use a lower threshold.
+        Snowfall areas are now expected to be generally ~100 m lower than before, closer to the actual minimum snowfall altitude.</p>
 
     <br>
     <p style="text-align:left; font-size:18px"><b>Update Times (UTC):</b></p>
