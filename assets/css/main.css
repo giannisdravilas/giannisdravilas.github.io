@@ -3458,6 +3458,7 @@ input, select, textarea {
 						#header > nav > ul > li a {
 							height: 6em;
 							line-height: 6em;
+							padding: 0 0em;
 						}
 
 		}
