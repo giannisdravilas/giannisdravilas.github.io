@@ -31,13 +31,26 @@
 </head>
 
 <body>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/weatherathens_snow_model_maps.js"></script>
     <header id="header">
         <a href="index.html" class="title">Giannis Dravilas</a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="thesis.html">Thesis</a></li>
-                <li><a href="snow_forecasting_model.html" class="active">Snow Forecasting Model</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Snow Forecasting Model</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="snow_forecasting_model.html">Description</a></li>
+                        <li><a href="weatherathens_snow_model_maps.html">Operational Forecasts</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>

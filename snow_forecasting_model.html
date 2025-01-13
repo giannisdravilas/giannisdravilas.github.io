@@ -30,7 +30,13 @@
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="thesis.html">Thesis</a></li>
-                        <li><a href="snow_forecasting_model.html" class="active">Snow Forecasting Model</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Snow Forecasting Model</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="snow_forecasting_model.html">Description</a></li>
+                                <li><a href="weatherathens_snow_model_maps.html">Operational Forecasts</a></li>
+                            </ul>
+                        </li>
 					</ul>
 				</nav>
 			</header>
@@ -43,37 +49,37 @@
 						<div class="inner">
 							<h1 class="major">Snow Forecasting Model</h1>
 
-                                <p>The Snow Forecasting Model is an innovative, ultra-high resolution snowfall prediction system designed specifically for Greece.
-                                    With a spatial resolution of 400 meters, this model revolutionizes snowfall forecasting, covering every corner
-                                    of Greece and even extending beyond its borders.
+                                <p>The Snow Forecasting Model is an innovative, high-resolution snowfall prediction system developed specifically for Greece.
+                                    With a spatial resolution of 400 meters, the model provides detailed and precise snowfall forecasts, covering Greece and 
+                                    its neighbouring countries.
                                 </p>
 
-                                <p>Leveraging variables such as temperature, humidity, and geopotential heights at different altitudes, as well as precipitation
-                                    data from numerical models like ICON-EU, GFS and GEM, a sophisticated algorithm for snowfall melting is applied to predict areas
-                                    in Greece prone to snowfall during approaching cold fronts.
+                                <p>The model makes use of temperature, humidity, geopotential height (at various levels) and precipitation data from
+                                    numerical weather models such as ICON-EU, GFS and GEM. This data is used as input to an algorithm that accounts for snow melting
+                                    processes, identifying areas likely to experience snowfall during approaching cold fronts.
                                 </p>
-                                <p>The project's complexity is highlighted by its intricate mapping process. The areas identified for potential
-                                    snowfall are overlaid onto an ultra-high-resolution topographic grid, using a spatial resolution of 400 x 400 meters.
-                                    This grid is comprised of approximately 6 million individual points covering Greece and its neighbouring countries. The model's
-                                    vertical dimension consists of 400 levels, so the resulting three-dimensional grid encompasses a total of 2.5 billion
-                                    individual points. This way, a cumulative snowfall map is created, as demonstrated in the examples below.
+                                <p>The key feature of the model is its complex mapping process. Potential snowfall regions are projected onto a high-resolution
+                                    topographic grid with a spatial resolution of 400 x 400 meters. This grid consists of approximately 6 million points covering 
+                                    Greece and its neighbouring countries. The model's vertical dimension consists of 400 levels (vertical resolution of approximately 
+                                    10 meters), so the resulting three-dimensional grid encompasses a total of 2.5 billion points. By repeating the process over multiple 
+                                    time steps, a cumulative snowfall map is created, as demonstrated in the examples below.
                                 </p>
-                                <p>The successful execution of this project is based on careful planning and implementation, as well as substantial computational resources.
-                                    The fusion of high-resolution forecast data with even finer-grained topographic data helps faithfully replicate the weather
-                                    patterns of each region, resulting in a very precise outcome.
+                                <p>The model's successful operation relies on careful design and implementation, supported by substantial computational resources.
+                                    By integrating high-resolution meteorological forecasts with even more detailed topographic data, the system accurately models local 
+                                    weather patterns, producing highly reliable results.
                                 </p>
                                 <p>Since January 2022, the Snow Forecasting Model has been used operationally by
                                     <a href="http://weatherathens.blogspot.gr/" target="_blank">Weatherathens</a>. It's essential to acknowledge that
-                                    the model's performance is influenced by a spectrum of factors, extending beyond its architecture. Temperature and humidity
+                                    the model's performance is influenced by various factors, extending beyond its architecture. Temperature and humidity
                                     forecasts at various altitudes in the lower troposphere, as well as precipitation forecasts, as generated by numerical weather
-                                    models, play a pivotal role in shaping the results. Additionally, the calculation of the minimum altitude where snow does not melt,
+                                    models, play an important role in shaping the results. Additionally, the calculation of the minimum snow-melting altitude,
                                     constrained by the vertical resolution of the initial data and abrupt atmospheric changes, along with the inherent approximations
                                     of the algorithm, significantly contribute to the final outcome.
                                 </p>
-                                <p>It's worth clarifying that the use of the term "model" in this context departs from its conventional association with numerical
-                                    weather models. Instead, it embodies a comprehensive process of assimilating copious forecast and real-world data to intricately
-                                    simulate atmospheric conditions. The ultimate goal is to make snowfall predictions accessible and understandable to
-                                    the public, translating complex meteorological insights into comprehensible information.
+                                <p>It is important to note that the term “model” in this context differs from its traditional association with numerical weather 
+                                    prediction models. Instead, it represents a comprehensive process of assimilating large volumes of forecast data and real-world
+                                    data to simulate atmospheric conditions with high precision. The ultimate goal is to make snowfall predictions accessible and 
+                                    understandable to the public, translating complex meteorological data into user-friendly, actionable information.
                                 </p>
                                 <style>
                                     .image-container {

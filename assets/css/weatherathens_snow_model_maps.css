@@ -184,3 +184,63 @@ caption {
     }
 
 }
+
+header {
+    position: relative; /* Establishes a stacking context */
+    z-index: 1000; /* Higher than other elements on the page */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative; /* Ensures the dropdown menu is positioned relative to the parent */
+    z-index: 500; /* Ensures the dropdown's parent maintains proper stacking */
+}
+
+nav ul a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    padding: 0px 3px;
+    display: inline-block;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positions it below the dropdown toggle */
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0px 0;
+    list-style: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10000; /* Ensures the dropdown menu appears on top of all elements */
+}
+
+.dropdown-menu li {
+    padding: 5px 10px; /* Correct padding to avoid overlapping or invalid values */
+    margin: 0; /* Prevent unnecessary spacing */
+    white-space: nowrap; /* Prevent text from breaking into multiple lines */
+}
+
+.dropdown-menu li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: grey;
+    border-radius: 3px;
+}
+
+/* JavaScript-triggered visibility */
+.dropdown.open .dropdown-menu {
+    display: block;
+}
