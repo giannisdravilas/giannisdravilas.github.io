@@ -1,498 +1,419 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK7GXEKP2L"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		gtag('config', 'G-DK7GXEKP2L');
-		</script>
-		<title>Giannis Dravilas</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<meta name="google-site-verification" content="_mpLnbSmW28vf-O4-QKTFZErJL18Slx9TYxkLkdtNfc" />
-	</head>
-	<body class="is-preload">
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-		<header id="header">
-			<a href="index.html" class="title">Giannis Dravilas</a>
-			<nav>
-				<ul>
-					<li><a href="index.html"class="active">Home</a></li>
-					<li><a href="thesis.html">Thesis</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle">Snow Forecasting Model</a>
-						<ul class="dropdown-menu">
-							<li><a href="snow_forecasting_model.html">Description</a></li>
-							<li><a href="weatherathens_snow_model_maps.html">Operational Forecasts</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</header>
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#work">Work Experience</a></li>
-							<li><a href="#education">Education</a></li>
-							<li><a href="#research">Research / Publications</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a href="#skills">Skills</a></li>
-							<li><a href="#cv">Full CV</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <title>Giannis (Ioannis) Dravilas - Data Scientist & AI Researcher in AI for Earth Observation, Weather and Climate</title>
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style2 fullscreen fade-up">
-						<div class="inner">
-							<h1>Giannis Dravilas</h1>
-							<p>Hello, I'm Giannis, a Data Scientist working at the intersection of artificial intelligence, machine learning and weather.</br></br>
-								I build intelligent weather systems by combining machine learning, rule-based models, and domain knowledge, while also working across the full data science workflow, from data exploration and feature engineering to insight generation, evaluation and deployment. My goal is to turn complex atmospheric data into reliable, AI-driven solutions for real-world use.</p>
-							<ul class="actions">
-								<li><a href="#work" class="button scrolly">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Transforms traditional CV bullets into Portfolio Feature Highlights */
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+        }
+        .feature-list li::before {
+            content: '\f0da'; /* FontAwesome solid arrow/caret */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            color: var(--accent-hover);
+            font-size: 0.9rem;
+        }
+        .feature-list strong {
+            color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="thesis.html">Thesis</a>
+                <a href="snowly.html">Snowly</a>
+                <div class="dropdown">
+                    <a class="dropbtn">Snow Model <i class="fa-solid fa-caret-down" style="font-size: 0.8em;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="snow_forecasting_model.html">Description</a>
+                        <a href="weatherathens_snow_model_maps.html">Operational Forecasts</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="https://drive.google.com/file/d/1qAqVp276dXn-zg6NAfdXRZZaONCx45r4/view" target="_blank" class="nav-pdf-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Full PDF CV
+                </a>
+            </div>
+        </nav>
 
-				<!-- Work -->
-					<section id="work" class="wrapper style2 spotlights">
-						<section>
-							<a href="" class="image"><img src="images/lightning.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Data Scientist @ WeatherXM (Nov 2022 - Present)</h2>
-									<p>Starting from November 2022, I 've been working as a Data Scientist at <a href="https://weatherxm.com/" target="_blank">WeatherXM</a>, a community powered web3 <a href="https://explorer.weatherxm.com/" target="_blank">weather station network</a>.</br></br>
-										My work involves analyzing and validating weather data, developing tools to assess and improve forecast accuracy, and building robust mechanisms for weather data quality evaluation. I design and maintain scalable systems that integrate real-time weather station observations, refactor complex codebases for performance and reliability and create interactive dashboards that communicate weather insights effectively to both technical and non-technical audiences.</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="" class="image"><img src="images/eumetsat_satellite.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>AI / ML Intern @ EUMETSAT (Aug 2025 - Oct 2025)</h2>
-									<p>From August to October 2025, I pursued an internship at <a href="https://eumetsat.int/" target="_blank">EUMETSAT</a>, the European operational satellite agency for monitoring weather, climate and the environment from space.</br></br>
-										During my time in the Digital Solutions & Satellite Application Facilities (DSA-SAF) Division, I applied Vision Transformers and CNNs to
-										EUMETSAT MTG and EUMETNET OPERA remote-sensing data. To build a dataset suitable for multi-node GPU training, I leveraged the Zarr format
-										and S3 storage in the Destination Earth Data Lake. I used MLflow for reproducible experimentation, Apache Airflow to construct an automated
-										inference pipeline and Docker to containerise workflows for deployment in HPC environments. I then scaled the application to multiple GPU
-										nodes in an HPC using Distributed Data Parallel, achieving successful multi-GPU training at scale.</p>
-									<p>Image <a href="https://imagine.eumetsat.int/smartViews/view?view=MTG-I1FirstImages" target="_blank">source</a>.</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="" class="image"><img src="images/supercomputer.png" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Independent Consultant / Software Engineer @ INNOV-ACTS (Dec 2023 - Sep 2024)</h2>
-									<p>I contributed as an independent consultant for the <a href="https://eurohypercon.eu/" target="_blank">EuroHyPerCon</a> project (funded by the EuroHPC JU - a joint initiative between the EU, European countries and private partners), which focuses on the connectivity
-										requirements and network design for High-Performance Computing (HPC) systems in Europe.</p>
-										<p>My work involved analyzing unstructured text data to uncover trends and derive actionable insights, supported by clear, data-driven visualizations to effectively communicate findings to stakeholders.</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="" class="image"><img src="images/climate.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Independent Contractor / Machine Learning Scientist @ PROBOTEK PC (Feb 2024 - Jul 2024)</h2>
-									<p>I contributed as an independent contractor for the development of a Climate Risk Assessment Platform.</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="" class="image"><img src="images/work.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<p>I have previously developed a <a href="https://www.citizenweather.gr/" target="_blank">weather website</a> and volunteered as a
-										Teaching Assistant for the "<a href="https://cgi.di.uoa.gr/~ip/" target="_blank">Introduction to Programming</a>" and "<a href="https://k08.chatzi.org/" target="_blank">Data Structures</a>" courses at the Department of
-										Informatics and Telecommunications of NKUA, supporting students in their learning process. In addition, I have volunteered
-										as a translator for the <a href="https://indico.cern.ch/" target="_blank">CERN Indico project</a>
-										and <a href="https://www.meteonetwork.it" target="_blank">meteonetwork.it</a>, contributing to the dissemination of valuable scientific content.</p>
-										<p>In December 2023 I was the Lead Instructor for the <a href="https://colab.research.google.com/drive/1V4mHl23v6leZrhXi5uu0Xf99HS--eVPX">"Data Science and Machine Learning for Weather and Climate"</a> workshop at <a href="https://gdg.community.dev/events/details/google-gdg-athens-presents-devfest-2023-athens/">Google DevFest Athens 2023</a>.</p>
-								</div>
-							</div>
-						</section>
-					</section>
+        <header class="profile-header">
+            <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=yJq1Z68AAAAJ&citpid=3" alt="Giannis Dravilas" class="profile-img">
+            
+            <div class="profile-info">
+                <h1>Giannis Dravilas</h1>
+                <div style="font-size: 0.95rem; color: var(--text-muted); margin-top: -0.5rem; margin-bottom: 0.8rem; font-weight: 500;">
+                    Ioannis Dravilas
+                </div>
+                <div class="profile-title">Data Scientist | AI & Machine Learning | Earth Observation, weather and climate</div>
+                <div class="location"><i class="fa-solid fa-location-dot"></i> Amsterdam, The Netherlands</div>
+                
+                <div class="social-links">
+                    <a style="cursor: pointer;" onmouseover="this.href=atob('bWFpbHRvOmdpYW5uaXMuZHJhdmlsYXNAZ21haWwuY29t');" title="Email">
+                        <i class="fa-solid fa-envelope"></i> Email
+                    </a>
+                    <a href="https://github.com/giannisdravilas" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/giannis-dravilas/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=yJq1Z68AAAAJ" target="_blank"><i class="fa-brands fa-google-scholar"></i> Scholar</a>
+                    <a href="https://www.researchgate.net/profile/Ioannis-Dravilas" target="_blank"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
+                    <a href="https://orcid.org/0009-0009-3859-2412" target="_blank"><i class="fa-brands fa-orcid"></i> ORCID</a>
+                </div>
+            </div>
+        </header>
 
-				<!-- Education -->
-				<section id="education" class="wrapper style2 spotlights">
-					<section>
-						<a href="" class="image"><img src="images/artificial_intelligence.jpeg" alt="" data-position="center center" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>MSc Artificial Intelligence (2024 - Now)</h2>
-								<p>In September 2024, I started my master's studies at University of Amsterdam, pursuing the MSc in Artificial Intelligence.</br>
-							</div>
-						</div>
-					</section>
-					<section>
-						<a href="" class="image"><img src="images/computer_science.jpg" alt="" data-position="center center" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>BSc Computer Science (2019 - 2023)</h2>
-								<p>In July 2023, I completed my studies at the <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> of the National and Kapodistrian University of Athens.</br>
-									My specializations included Data and Knowledge Management, as well as Software.</br></br>
-									You can find my published thesis, "Machine Learning Snowfall Retrieval Algorithms for Satellite Precipitation Estimates," <a href="https://pergamos.lib.uoa.gr/en/item/uoadl:3338966" target="_blank">here</a>.
-									In June 2024, my work was selected for the annual <a href="https://www.di.uoa.gr/sites/default/files/documents/Studbook2024.pdf" target="_blank">e-book</a> showcasing top theses from the Department.</p>
-							</div>
-						</div>
-					</section>
-					<section>
-						<a href="" class="image"><img src="images/high_school.jpg" alt="" data-position="top center" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>High School (2016 - 2019)</h2>
-								<p>In 2019, I graduated from High School, where my academic achievements included qualifying for the National Mathematical Olympiad, a national-level competition organized by the Hellenic Mathematical Society.</br></br>
-									Additionally, I actively participated in the Panhellenic Competition in Informatics.
-							</div>
-						</div>
-					</section>
-				</section>
+        <section id="experience">
+            <h2>Work Experience</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Data Scientist</span>
+                    <span class="item-date">Nov 2022 - Dec 2025</span>
+                </div>
+                <div class="item-subtitle"><a href="https://weatherxm.com/" target="_blank">WeatherXM</a></div>
+                <ul class="feature-list">
+                    <li><strong>Operational Forecast Validation:</strong> Designed and developed a <a href="https://weatherxm.com/forecast-accuracy-tracking/" target="_blank">benchmarking system</a> to evaluate weather forecasts against 8,000+ real-time stations, utilising results to drive model selection.</li>
+                    <li><strong>Hyperlocal Forecasting Pipeline:</strong> Designed and engineered a <a href="https://weatherxm.com/hyperlocal-station-forecast/" target="_blank">project</a> to enhance NWP accuracy by assimilating localised station data, transitioning the system from PoC to a production microservice.</li>
+                    <li><strong>Data Quality Control (QC):</strong> Optimised <a href="https://github.com/weatherxm-network/qod/" target="_blank">Python-based QC mechanisms</a> for meteorological time-series; refactoring legacy code yielded a 50% speed improvement.</li>
+                    <li><strong>Visualisation:</strong> Built interactive dashboards and <a href="https://www.linkedin.com/posts/weatherxm_california-is-currently-facing-unprecedented-activity-7160929873874558976-Y3rL" target="_blank">visualisations</a> to communicate complex weather concepts to stakeholders and the public.</li>
+                    <li><strong>Mentorship:</strong> Mentored a junior data scientist on best practices for scientific software engineering.</li>
+                </ul>
+                <ul class="skills-list">
+                    <li>Python</li><li>SQL</li><li>NetCDF</li><li>GRIB2</li><li>Parquet</li><li>xarray</li><li>Docker</li><li>Git</li><li>S3</li><li>AWS Athena</li><li>Grafana</li><li>Meteorological Data</li><li>Numerical Weather Prediction</li><li>Weather Station Observations</li><li>Timeseries</li><li>Machine Learning</li>
+                </ul>
+            </div>
 
-				<!-- Research -->
-				<section id="research" class="wrapper style2 spotlights">
-					<section>
-						<a href="" class="image"><img src="images/snow_aerial.jpeg" alt="" data-position="center center" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Towards a Machine Learning Snowfall Retrieval Algorithm for GPM-IMERG</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">AI / ML Intern</span>
+                    <span class="item-date">Aug 2025 - Oct 2025</span>
+                </div>
+                <div class="item-subtitle"><a href="https://eumetsat.int/" target="_blank">EUMETSAT</a> (Digital Solutions and SAF Division)</div>
+                <ul class="feature-list">
+                    <li><strong>AI-Factory Data Workflows:</strong> Explored concepts for data management in support of establishing AI-Factories within the context of <a href="https://destination-earth.eu/" target="_blank">Destination Earth</a>.</li>
+                    <li><strong>Deep Learning on Satellite Data:</strong> Applied Vision Transformers (ViTs) and CNNs to MTG and OPERA remote sensing data, in cross-collaboration with the Remote Sensing Products Division.</li>
+                    <li><strong>Cloud-Native ML Workflows:</strong> Built AI-ready EO datasets from MTG/OPERA data on the DestinE S3 Data Lake using cloud-native Zarr pipelines, resolving I/O bottlenecks.</li>
+                    <li><strong>HPC Scalability:</strong> Scaled model training across multiple GPUs on HPC systems, utilising DDP.</li>
+                    <li><strong>MLOps:</strong> Containerised ML workflows (Docker), automated inference with Airflow, and tracked experiments with MLflow.</li>
+                </ul>
+                <ul class="skills-list">
+                    <li>Python</li><li>PyTorch</li><li>Zarr</li><li>HPC</li><li>Distributed Data Parallel</li><li>Docker</li><li>Apache Airflow</li><li>MLflow</li><li>S3</li><li>GitLab</li><li>Deep Learning</li><li>Vision Transformers</li><li>Convolutional Neural Networks</li><li>Remote Sensing</li><li>Satellite Data</li><li>Weather Radar Data</li>
+                </ul>
+            </div>
 
-								<p>I. Dravilas, S. Dafis, G. Kyros, K. Lagouvardos, and M. Koubarakis, 'Towards a Machine Learning Snowfall
-									Retrieval Algorithm for GPM-IMERG', Environmental Sciences Proceedings, vol. 26, no. 1, 2023.</p>
-									
-								<p>Also presented at the <a href="https://www.comecap2023.gr/" target="_blank">16th International
-								Conference on Meteorology, Climatology, and Atmospheric Physics on September 2023</a>.</p>
-								<div class="actions-container">
-									<ul class="actions">
-										<li><a href="https://doi.org/10.3390/environsciproc2023026103" class="button" target="_blank">View Publication</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="https://www.researchgate.net/publication/374290200_Poster_Towards_a_Machine_Learning_Snowfall_Retrieval_Algorithm_for_GPM-IMERG" class="button" target="_blank">View Poster</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section>
-						<a href="" class="image"><img src="images/weather_station.jpg" alt="" data-position="center center" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Designing a Global Weather Station Network</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Software Engineer / Independent Consultant</span>
+                    <span class="item-date">Dec 2023 - Sep 2024</span>
+                </div>
+                <div class="item-subtitle"><a href="https://innov-acts.com/" target="_blank">INNOV-ACTS</a> for the <a href="https://eurohypercon.eu/" target="_blank">EuroHyPerCon project</a></div>
+                <ul class="feature-list">
+                    <li>Focused on the connectivity requirements and network design for High-Performance Computing (HPC) systems in Europe.</li>
+                    <li>Conducted in-depth analysis of unstructured text data, exploring trends and deriving actionable insights.</li>
+                    <li>Used visualisation techniques to effectively communicate key findings to stakeholders.</li>
+                </ul>
+            </div>
 
-								<p>S. Keppas, H. Balis, I. Dravilas, and J. Pagonis, 'Designing a Global Weather Station Network',
-									EGU General Assembly 2024, Vienna, Austria, 14-19 Apr 2024, EGU24-9241.</p>
-									
-								<p>Presented at <a href="https://www.egu24.eu/" target="_blank">EGU General Assembly 2024</a>.</p>
-								<ul class="actions">
-									<li><a href="https://doi.org/10.5194/egusphere-egu24-9241" class="button" target="_blank">View abstract</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section>
-						<a href="" class="image"><img src="images/supercomputer.png" alt="" data-position="center center" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>EuroHyPerCon - Connectivity requirements and network design for HPC systems in Europe</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Machine Learning Scientist / Independent Contractor</span>
+                    <span class="item-date">Feb 2024 - Jul 2024</span>
+                </div>
+                <div class="item-subtitle">PROBOTEK PC</div>
+                <ul class="feature-list">
+                    <li>Contributed as an independent contractor for the development of a Climate Risk Assessment Platform.</li>
+                </ul>
+            </div>
+        </section>
 
-								<p>Enomix, EuroHPC JU, HLRS, Innov-Acts, 'EuroHyPerCon - Connectivity requirements and network design for
-									HPC systems in Europe : summary report', Publications Office of the European Union, 2025.</p>
-									
-								<ul class="actions">
-									<li><a href="https://doi.org/10.2793/4687161" class="button" target="_blank">View publication</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section>
-						<a href="" class="image"><img src="images/snow.jpg" alt="" data-position="center center" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Undergraduate Thesis (Sep 2022 - Jul 2023)</h2>
-								<p>During my thesis, I explored the application of advanced Machine Learning techniques, with a particular focus on
-									Deep Learning algorithms, to estimate the phase of satellite precipitation estimates.
-									Both numerical and in-situ observational weather data were also utilized in this study.</p>
-									
-									<ul class="actions">
-										<li><a href="thesis.html" class="button" target="_blank">Learn More</a></li>
-									</ul>
-							</div>
-						</div>
-					</section>
-				</section>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">MSc in Artificial Intelligence</span>
+                    <span class="item-date">Sep 2024 - Jun 2026 (Expected)</span>
+                </div>
+                <div class="item-subtitle"><a href="https://uva.nl/en" target="_blank">University of Amsterdam</a></div>
+                <ul class="feature-list">
+                    <li>Thesis (in progress): <em>ML-Based Feature Detection on GEO-Ring Satellite Data</em>, in collaboration with EUMETSAT. Supervisors: <a href="https://a-lucic.github.io/" target="_blank">Ana Lučić</a> (UvA), Miruna Stoicescu (EUMETSAT), <a href="https://scholar.google.com/citations?user=sGTlCGsAAAAJ&hl=en" target="_blank">Roope Tervo</a> (EUMETSAT).</li>
+                    <li>Research outputs: Two journal submissions in the area of Vision Transformers (<a href="https://openreview.net/forum?id=4VonR2EPrf" target="_blank">1</a>, <a href="https://openreview.net/forum?id=QeERUU3GEB" target="_blank">2</a>), one submission in Information Retrieval (under review), one accepted <a href="https://arxiv.org/abs/2602.13402v1" target="_blank">paper</a> in Human-Computer Interaction.</li>
+                </ul>
+            </div>
 
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">BSc in Informatics and Telecommunications</span>
+                    <span class="item-date">Sep 2019 - Jul 2023</span>
+                </div>
+                <div class="item-subtitle"><a href="https://www.di.uoa.gr/en" target="_blank">National and Kapodistrian University of Athens</a></div>
+                <ul class="feature-list">
+                    <li><a href="https://pergamos.lib.uoa.gr/uoa/dl/object/3338966/file.pdf" target="_blank">Thesis</a>: <em>Machine Learning Snowfall Retrieval Algorithms for Satellite Precipitation Estimates</em>. Supervisors: <a href="https://cgi.di.uoa.gr/~koubarak/" target="_blank">Manolis Koubarakis</a> (NKUA), <a href="https://scholar.google.com/citations?user=HrfZWgEAAAAJ&hl=en" target="_blank">Stavros Dafis</a>, <a href="https://scholar.google.com/citations?user=PNfCK7oAAAAJ&hl=en" target="_blank">Georgios Kyros</a>, <a href="https://scholar.google.com/citations?user=Sph98NkAAAAJ&hl=en" target="_blank">Kostas Lagouvardos</a> (NOA).</li>
+                    <li>Thesis grade: 10/10 - selected for the annual <a href="https://www.di.uoa.gr/sites/default/files/documents/Studbook2024.pdf" target="_blank">e-book</a> showcasing top theses from the Department, resulted in a peer-reviewed <a href="https://www.mdpi.com/2673-4931/26/1/103" target="_blank">publication</a>.</li>
+                </ul>
+            </div>
+        </section>
 
-				<!-- Projects -->
-					<section id="projects" class="wrapper style2 fade-up">
-						<div class="inner">
-							<h2>Projects</h2>
-							<p>Over the past few years, I 've completed several projects, ranging from personal initiatives and academic assignments, to professional work.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>snowly.eu</h3>
-									<p>Developed a web application providing high-resolution 2D and 3D snowfall forecasts for Europe, by downscaling outputs from ICON-EU, IFS, GFS and GEM NWP models. Implemented a downscaling workflow achieving 400 m resolution over Greece and 2.5 km across Europe, enabling detailed and interactive weather visualization. Built in collaboration with <a href="https://www.linkedin.com/in/giorgos-kyros/" target="_blank">Giorgos Kyros</a>.</p>
-									<ul class="actions">
-										<li><a href="http://snowly.eu/" class="button" target="_blank">Try it here</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Vision Transformers for Satellite & Radar Weather Data</h3>
-									<p>Applied ViTs to large-scale weather data, used Distributed Data Parallel on an HPC system, built Zarr datasets on S3
-									and employed Docker, MLflow and Apache Airflow for reproducible training and automated inference.</p>
-									<ul class="actions">
-										<li><a href="https://www.eumetsat.int/" class="button" target="_blank">Learn More</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>WeatherXM Network Quality of Data algorithms</h3>
-									<p>Refactored and optimized all the quality of data mechanisms used at WeatherXM, resulting in a 50% decrease in processing speed.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/weatherxm-network/qod" class="button" target="_blank">Learn More</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>WeatherXM Forecast Accuracy Tracking</h3>
-									<p>Designed and implemented a tool to evaluate the accuracy of multiple weather models, using observational data from 9,000 WeatherXM weather stations.</p>
-									<ul class="actions">
-										<li><a href="https://weatherxm.com/forecast-accuracy-tracking/" class="button" target="_blank">Learn More</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Snow Forecasting Model</h3>
-									<p>Developed a high-resolution, post-processing, rule-based snow forecasting model for Greece in Python using downscaling tehcniques.</p>
-									<ul class="actions">
-										<li><a href="snow_forecasting_model.html" class="button" target="_blank">Learn More</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Deep Learning for Natural Language Processing</h3>
-									<p>Conducted Sentiment Classification of users' text reviews using Deep Learning (Feed-forward, Recurrent neural networks, and a pre-trained BERT model in PyTorch) and developed a Question Answering engine.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/giannisdravilas/Deep-Learning-for-Natural-Language-Processing" class="button" target="_blank">GitHub</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Waterspout Forecasting Model</h3>
-									<p>Developed a waterspout forecasting model using SWI Index and numerical weather data in Python.</p>
-									<ul class="actions">
-										<li><a href="https://www.facebook.com/weatherathens/posts/pfbid02uxqhsBB1ytbLah9wmzJk1pxV6V7gxxp2eGFFeRbhNxodHJ9EkJpCocY31doLzUPvl" class="button" target="_blank">Learn More</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Music Genre Classification using Deep Learning</h3>
-									<p>Created a music genre classifier for short music clips using PyTorch-based Feed-forward and Convolutional Neural Networks.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/giannisdravilas/Music-Genre-Classification-using-Deep-Learning" class="button" target="_blank">GitHub</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Weather Plotting</h3>
-									<p>Visualized weather data in Python, using GRIB and netCDF formats, as well as Matplotlib and Cartopy libraries.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/giannisdravilas/Weather-Plotting" class="button" target="_blank">GitHub</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Image Recognition using Machine Learning</h3>
-									<p>Developed a facial recognition system using Yale B database face images, employing the Eigenfaces technique, including PCA and a nearest neighbour classifier. Additionally created a classification system for images containing handwritten digits, using SVM.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/giannisdravilas/Image-Recognition-using-Machine-Learning" class="button" target="_blank">GitHub</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Sentiment Analysis</h3>
-									<p>Conducted Sentiment Analysis on Covid-19 tweets obtained from Twitter, using a range of Data Mining techniques and Machine Learning algorithms.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/giannisdravilas/Sentiment-Analysis-Covid19-Tweets" class="button" target="_blank">GitHub</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Trips Duration Analysis</h3>
-									<p>Analyzed data of New York City taxi trips and created a Random Forest Regressor for predicting the duration of taxi trips.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/giannisdravilas/NYC-Taxi-Trip-Duration-Prediction-using-Machine-Learning" class="button" target="_blank">GitHub</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Polygonization</h3>
-									<p>Implemented polygonization algorithms for point sets in a plane, and optimized their areas using operational research concepts in C++ with the CGAL library.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/giannisdravilas/Polygonization-Point-Sets-2d" class="button" target="_blank">GitHub</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Unix Systems Programming</h3>
-									<p>Developed software and protocols in C/C++ for Linux, using processes, threads, pipes, signals and the internet protocol.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/giannisdravilas/FTP-implementation-over-TCP" class="button" target="_blank">GitHub #1</a></li>
-										<li><a href="https://github.com/giannisdravilas/URLs-Manager" class="button" target="_blank">GitHub #2</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Constraint Satisfaction Problem</h3>
-									<p>Solved the constraint satisfaction Radio Link Frequency Assignment Problem using Artificial Intelligence.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/giannisdravilas/Radio-Link-Frequency-Assignment-Problem" class="button" target="_blank">GitHub</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Parallel Programming</h3>
-									<p>Developed parallel solutions for Monte Carlo simulations using Pthreads, OpenMP and MPI.</p>
-								</section>
-							</div>
-						</div>
-					</section>
+        <section id="publications">
+            <h2>Publications & Research</h2>
+            <ul class="pub-list">
+                <li>
+                    <strong>Burning Lowlands: A Serious Game to Evaluate Citizen Learning, Communication, and Decision-Making in Climate Adaptation</strong><br>
+                    <span class="pub-authors">M. Mijailović, D. Roos, H. Bos, I. Beumer, <strong>I. Dravilas</strong>, Y. Kenar, E. Krasauskaite.</span>
+                    <em>EGU General Assembly, 2026.</em> <a href="https://doi.org/10.5194/egusphere-egu26-15019" target="_blank">[DOI]</a>
+                </li>
+                <li>
+                    <strong>InfoCIR: Multimedia Analysis for Composed Image Retrieval</strong><br>
+                    <span class="pub-authors"><strong>I. Dravilas*</strong>, I. Kapetangeorgis*, A. Latsoudis*, C. McCarthy, G. Marcelino, M. Worring.</span>
+                    <em>arXiv [cs.HC], 2026. To appear in IEEE PacificVis 2026.</em> <a href="https://arxiv.org/abs/2602.13402v1" target="_blank">[arXiv]</a>
+                </li>
+                <li>
+                    <strong>On the Reproducibility of Vision Transformers Need Registers</strong><br>
+                    <span class="pub-authors">S. Baxevanakis*, P. Karageorgis*, <strong>I. Dravilas</strong>, K. Szewczyk.</span>
+                    <em>Submitted to TMLR.</em> <a href="https://openreview.net/forum?id=4VonR2EPrf" target="_blank">[OpenReview]</a>
+                </li>
+                <li>
+                    <strong>Reproducibility Study of FairViT: Fair Vision Transformer via Adaptive Masking</strong><br>
+                    <span class="pub-authors">O. Boufalis*, <strong>I. Dravilas*</strong>, P. A. Gkotsi*, A. Latsoudis*.</span>
+                    <em>Submitted to TMLR.</em> <a href="https://openreview.net/forum?id=QeERUU3GEB" target="_blank">[OpenReview]</a>
+                </li>
+                <li>
+                    <strong>Connectivity Requirements and Network Design for HPC Systems in Europe: Summary Report</strong><br>
+                    <span class="pub-authors">EuroHyPerCon Consortium.</span>
+                    <em>Publications Office of the European Union, 2025.</em> <a href="https://doi.org/10.2793/4687161" target="_blank">[DOI]</a>
+                </li>
+                <li>
+                    <strong>Designing a Global Weather Station Network</strong><br>
+                    <span class="pub-authors">S. Keppas, H. Balis, <strong>I. Dravilas</strong>, J. Pagonis.</span>
+                    <em>EGU General Assembly, 2024.</em> <a href="https://doi.org/10.5194/egusphere-egu24-9241" target="_blank">[DOI]</a>
+                </li>
+                <li>
+                    <strong>Towards a Machine Learning Snowfall Retrieval Algorithm for GPM-IMERG</strong><br>
+                    <span class="pub-authors"><strong>I. Dravilas</strong>, S. Dafis, G. Kyros, K. Lagouvardos, M. Koubarakis.</span>
+                    <em>Environmental Sciences Proceedings, 2023.</em> <a href="https://doi.org/10.3390/environsciproc2023026103" target="_blank">[DOI]</a>
+                </li>
+            </ul>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">* Equal contribution</p>
+        </section>
 
-				<!-- Skills -->
-					<section id="skills" class="wrapper style2 fade-up">
-						<div class="inner">
-							<h2>Skills</h2>
-							<ul>
-								<li>Artificial Intelligence</li>
-								<li>Deep Learning</li>
-								<li>Machine Learning</li>
-								<li>Data Science</li>
-								<li>Data Mining</li>
-								<li>Optimization Problems</li>
-								<li>Computational Geometry</li>
-								<li>Software Development</li>
-								<li>Scripting</li>
-								<li>Unix Systems Programming</li></br>
-								<li>Data Visualization</li></br>
-								<li>Weather</li>
-								<li>Climate</li>
-								<li>Meteorology</li>
-								<li>Zarr, GRIB, netCDF Data Processing</li>
-								<li>Satellite Weather Data Processing</li>
-								<li>Weather Forecasting</li></br>
-								<li>PyTorch</li>
-								<li>S3 object storage</li>
-								<li>AWS Athena</li>
-								<li>Docker</li>
-								<li>MLflow</li>
-								<li>Apache Airflow</li>
-								<li>Distributed Data Parallel </li>
-								<li>Git</li>
-							</ul>
-						</div>
-					</section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-title">Snowly.eu</div>
+                    <p>Built a web application with interactive 2D and 3D snowfall forecast maps for Europe, based on downscaled NWP models in 400 m spatial resolution.</p>
+                    <div class="project-links"><a href="https://snowly.eu/" target="_blank"><i class="fa-solid fa-link"></i> snowly.eu</a></div>
+                </div>
 
-				<!-- Full CV -->
-				<section id="cv" class="wrapper style2 fade-up">
-					<div class="inner">
-						<h2>Full CV</h2>
-						<ul class="actions">
-							<li><a href="https://drive.google.com/file/d/1qAqVp276dXn-zg6NAfdXRZZaONCx45r4/view?usp=drive_link" class="button" target="_blank">View CV</a></li>
-						</ul>
-					</div>
-				</section>
-							
-				<!-- Contact -->
-					<section id="contact" class="wrapper style2 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<section>
-								<ul class="contact">
-									<li>
-										<h3>Email</h3>
-										firstname.lastname at gmail dot com
-									</li>
-									<li>
-										<h3>Social</h3>
-										<ul class="icons">
-											<li><a href="https://github.com/giannisdravilas" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-											<li><a href="https://www.linkedin.com/in/giannis-dravilas/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-										</ul>
-									</li>
-									<li><h3><a href="https://scholar.google.com/citations?user=yJq1Z68AAAAJ" target="_blank">Google Scholar</a></h3></li>
-									<li><h3><a href="https://orcid.org/0009-0009-3859-2412" target="_blank">ORCID</a></h3></li>
-								</ul>
-							</section>
-						</div>
-					</section>
+                <div class="project-card">
+                    <div class="project-title">InfoCIR Dashboard</div>
+                    <p>Developed InfoCIR, a modular Plotly-Dash visual analytics dashboard that integrates multimodal composed image retrieval (CIR) models into an interactive prompt-engineering and debugging system.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/giannisdravilas/InfoCIR" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a> | 
+                        <a href="https://arxiv.org/abs/2602.13402v1" target="_blank"><i class="fa-solid fa-file-lines"></i> Paper</a>
+                    </div>
+                </div>
 
-			</div>
+                <div class="project-card">
+                    <div class="project-title">Forecast Accuracy Tracking</div>
+                    <p>Designed and implemented a tool to evaluate the accuracy of multiple weather models, using observational data from 8,000 WeatherXM weather stations.</p>
+                    <div class="project-links"><a href="https://weatherxm.com/forecast-accuracy-tracking/" target="_blank"><i class="fa-solid fa-link"></i> WeatherXM</a></div>
+                </div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style2-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+                <div class="project-card">
+                    <div class="project-title">Quality of Weather Data Mechanism</div>
+                    <p>Refactored and optimised all the quality of data mechanisms used at WeatherXM, resulting in a 50% speed improvement.</p>
+                    <div class="project-links"><a href="https://github.com/weatherxm-network/qod" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+                </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                <div class="project-card">
+                    <div class="project-title">Snow Forecasting Model</div>
+                    <p>Developed a high-resolution, post-processing, rule-based snow forecasting model for Greece in Python using downscaling techniques.</p>
+                    <div class="project-links"><a href="snow_forecasting_model.html"><i class="fa-solid fa-link"></i> Learn More</a></div>
+                </div>
 
-	</body>
+                <div class="project-card">
+                    <div class="project-title">Vision Transformers for Satellite Data</div>
+                    <p>Applied ViTs to large-scale weather data, used DDP on an HPC system, built Zarr datasets on S3 and employed Docker, MLflow and Apache Airflow.</p>
+                    <div class="project-links"><a href="https://www.eumetsat.int/" target="_blank"><i class="fa-solid fa-link"></i> EUMETSAT</a></div>
+                </div>
 
-	<script>
-		// Function to convert a URL to Base64
-		async function convertURLToBase64(url) {
-		  try {
-			const response = await fetch(url);
-			const blob = await response.blob();
-			const reader = new FileReader();
-			reader.onload = function () {
-			  const base64Data = reader.result.split(",")[1];
-			  displayBase64Data(base64Data);
-			  setImageSrc(base64Data);
-			};
-			reader.readAsDataURL(blob);
-		  } catch (error) {
-			console.error("Error fetching the URL:", error);
-		  }
-		}
+                <div class="project-card">
+                    <div class="project-title">Reproducibility Study: Registers for ViTs</div>
+                    <p>Explored the role of register tokens in Vision Transformers by reproducing prior work, testing generalisation across diverse models (DINO, DINOv2, OpenCLIP, DeiT3).</p>
+                    <div class="project-links"><a href="https://openreview.net/forum?id=4VonR2EPrf" target="_blank"><i class="fa-solid fa-link"></i> OpenReview</a></div>
+                </div>
 
-		function setImageSrc(base64Data) {
-			const imageElement = document.getElementById("myImage");
-			imageElement.src = "data:png/jpg;base64," + base64Data;
-		}
+                <div class="project-card">
+                    <div class="project-title">Reproducibility Study: FairViT</div>
+                    <p>Reproduced and evaluated the FairViT model's fairness and efficiency claims on two datasets, revealing limitations in adaptive masking.</p>
+                    <div class="project-links">
+                        <a href="https://anonymous.4open.science/r/FairViT-reproducibility-study-54B0/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a> | 
+                        <a href="https://openreview.net/forum?id=QeERUU3GEB" target="_blank"><i class="fa-solid fa-link"></i> OpenReview</a>
+                    </div>
+                </div>
 
-	</script>
+                <div class="project-card">
+                    <div class="project-title">Deep Learning for NLP</div>
+                    <p>Conducted Sentiment Classification of users' text reviews using Deep Learning (FFNN, RNN, and a pre-trained BERT model in PyTorch) and developed a QA engine.</p>
+                    <div class="project-links"><a href="https://github.com/giannisdravilas/Deep-Learning-for-Natural-Language-Processing" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Music Genre Classification using DL</div>
+                    <p>Created a music genre classifier for short music clips using PyTorch-based Feed-forward and Convolutional Neural Networks.</p>
+                    <div class="project-links"><a href="https://github.com/giannisdravilas/Music-Genre-Classification-using-Deep-Learning" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Weather Plotting</div>
+                    <p>Visualised weather data in Python, using GRIB and netCDF formats, as well as Matplotlib and Cartopy libraries.</p>
+                    <div class="project-links"><a href="https://github.com/giannisdravilas/Weather-Plotting" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Waterspout Forecasting Model</div>
+                    <p>Developed a waterspout forecasting model using the SWI Index and numerical weather data in Python.</p>
+                    <div class="project-links"><a href="https://www.facebook.com/weatherathens/posts/pfbid02uxqhsBB1ytbLah9wmzJk1pxV6V7gxxp2eGFFeRbhNxodHJ9EkJpCocY31doLzUPvl" target="_blank"><i class="fa-solid fa-link"></i> Weatherathens</a></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Image Recognition using ML</div>
+                    <p>Developed a facial recognition system using Eigenfaces (PCA + nearest neighbour) on the Yale B dataset, and a handwritten digit classifier using SVM.</p>
+                    <div class="project-links"><a href="https://github.com/giannisdravilas/Image-Recognition-using-Machine-Learning" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Sentiment Analysis</div>
+                    <p>Conducted Sentiment Analysis on Covid-19 tweets obtained from Twitter, using a range of Data Mining techniques and Machine Learning algorithms.</p>
+                    <div class="project-links"><a href="https://github.com/giannisdravilas/Sentiment-Analysis-Covid19-Tweets" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Trips Duration Analysis</div>
+                    <p>Analyzed data of New York City taxi trips and created a Random Forest Regressor for predicting the duration of taxi trips.</p>
+                    <div class="project-links"><a href="https://github.com/giannisdravilas/NYC-Taxi-Trip-Duration-Prediction-using-Machine-Learning" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Constraint Satisfaction Problem</div>
+                    <p>Solved the constraint satisfaction Radio Link Frequency Assignment Problem using Artificial Intelligence.</p>
+                    <div class="project-links"><a href="https://github.com/giannisdravilas/Radio-Link-Frequency-Assignment-Problem" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Computational Geometry Optimisation</div>
+                    <p>Implemented polygonisation algorithms for point sets in a plane, and optimised their areas using operational research concepts in C++ with the CGAL library.</p>
+                    <div class="project-links"><a href="https://github.com/giannisdravilas/Polygonization-Point-Sets-2d" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Unix Systems Programming</div>
+                    <p>Developed software and protocols in C/C++ for Linux, using processes, threads, pipes, signals and the internet protocol.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/giannisdravilas/FTP-implementation-over-TCP" target="_blank"><i class="fa-brands fa-github"></i> GitHub 1</a> | 
+                        <a href="https://github.com/giannisdravilas/URLs-Manager" target="_blank"><i class="fa-brands fa-github"></i> GitHub 2</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Parallel Programming</div>
+                    <p>Developed parallel solutions for Monte Carlo simulations using Pthreads, OpenMP and MPI.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="volunteer">
+            <h2>Volunteer & Extra-Curricular</h2>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Amateur Meteorologist & Photographer</span>
+                    <span class="item-date">Jan 2015 - Now</span>
+                </div>
+                <p>Founder and owner of <a href="https://weatherathens.blogspot.com/" target="_blank">Weatherathens</a> and <a href="https://snowly.eu/" target="_blank">snowly.eu</a>. Nature photography work featured online by research institutions, e.g., <a href="https://www.meteo.gr/article_view.cfm?entryID=1381" target="_blank">National Observatory of Athens</a>.</p>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Volunteer Translator</span>
+                    <span class="item-date">May 2021 - Now</span>
+                </div>
+                <div class="item-subtitle"><a href="https://indico.cern.ch/" target="_blank">CERN</a></div>
+                <p>Translate user interface content and computer science terminology for the Indico project from English to Greek.</p>
+            </div>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Workshop Lead Instructor</span>
+                    <span class="item-date">Dec 2023</span>
+                </div>
+                <div class="item-subtitle"><a href="https://gdg.community.dev/" target="_blank">Google DevFest Athens 2023</a></div>
+                <p>Led a hands-on <a href="https://github.com/giannisdravilas/Data-Science-And-Machine-Learning-for-Weather-and-Climate-Google-DevFest-Athens-2023" target="_blank">workshop</a> on data science and ML for weather/climate using Python and key libraries.</p>
+            </div>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Volunteer Teaching Assistant</span>
+                    <span class="item-date">Oct 2020 - Jul 2023</span>
+                </div>
+                <div class="item-subtitle">National and Kapodistrian University of Athens</div>
+                <p>Supported first-year students in understanding core concepts and completing lab exercises for the courses "<a href="https://cgi.di.uoa.gr/~ip/" target="_blank">Introduction to Programming</a>" and "<a href="https://k08.chatzi.org/2023/home/" target="_blank">Data Structures and Programming Techniques</a>".</p>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Volunteer Translator</span>
+                    <span class="item-date">Jun 2020</span>
+                </div>
+                <div class="item-subtitle"><a href="https://www.meteonetwork.it/" target="_blank">meteonetwork.it</a></div>
+                <p>Translated user interface content and meteorological terminology from English to Greek.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Giannis Dravilas.</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/theme.js"></script>
+</body>
 </html>

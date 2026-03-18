@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Light Theme Palette */
+    --bg-page: #f8fafc; 
+    --bg-card: #ffffff;
+    --text-main: #0f172a; 
+    --text-muted: #475569; 
+    --accent-color: #1e40af; 
+    --accent-hover: #3b82f6; 
+    --border-color: #e2e8f0; 
+    --tag-bg: #e0e7ff; 
+    --tag-text: #3730a3; 
+}
+
+/* Slate Dark Balance */
+html.dark-mode {
+    --bg-page: #0f172a; 
+    --bg-card: #1e293b;
+    --text-main: #f8fafc; 
+    --text-muted: #94a3b8; 
+    --accent-color: #38bdf8; 
+    --accent-hover: #7dd3fc; 
+    --border-color: #334155; 
+    --tag-bg: #0c4a6e; 
+    --tag-text: #e0f2fe; 
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 3rem; 
+}
+
+section {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+    color: var(--text-main);
+}
+
+h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.4rem;
+    display: inline-block;
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: var(--accent-color);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-muted);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-pdf-btn {
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.2s;
+    font-weight: 600;
+}
+
+.nav-pdf-btn:hover {
+    filter: brightness(0.95);
+    text-decoration: none;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-color: var(--bg-page);
+}
+
+/* Dropdown Navigation */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-card);
+    min-width: 220px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: var(--text-main);
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.2s;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-page);
+    color: var(--accent-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Profile Header (Compact Desktop) */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+    padding: 0;
+    margin-bottom: 2rem; 
+}
+
+.profile-img {
+    width: 110px; 
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--bg-card);
+    box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 1.8rem; 
+    margin-bottom: 0; 
+}
+
+.profile-title {
+    font-size: 1.05rem; 
+    color: var(--text-muted);
+    margin-bottom: 0.2rem; 
+    font-weight: 500;
+}
+
+.location {
+    font-size: 0.9rem; 
+    color: var(--text-muted);
+    margin-bottom: 0.6rem; 
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; 
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem; 
+    color: var(--text-muted);
+    background-color: var(--bg-card);
+    padding: 0.3rem 0.6rem; 
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-color: var(--bg-page);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+/* Items */
+.item { margin-bottom: 2rem; }
+.item:last-child { margin-bottom: 0; }
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+
+.item-title {
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.item-subtitle {
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.item-date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    background-color: var(--bg-page);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+li { margin-bottom: 0.4rem; }
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+    margin-top: 0.8rem;
+}
+
+.skills-list li {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--bg-page);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.project-links { font-size: 0.9rem; font-weight: 600; }
+
+/* Operational Maps & Tables Styling */
+.map-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    background-color: var(--bg-page);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.map-controls select, .map-controls button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--bg-card);
+    color: var(--text-main);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.map-controls button:hover, .map-controls select:focus {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    border-color: var(--tag-text);
+    outline: none;
+}
+
+.maps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.image-wrapper {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.02);
+}
+
+.image-text {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+}
+
+table caption {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+th {
+    font-weight: 600;
+    background-color: var(--bg-page);
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    padding-bottom: 2rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .container { padding: 1rem 1rem 2rem; }
+    
+    /* 1. Clearer Nav Hierarchy */
+    nav { 
+        flex-direction: column; 
+        padding: 0.8rem 1rem; 
+        margin-bottom: 1.5rem; 
+        gap: 0; 
+    }
+    
+    .nav-links { 
+        width: 100%;
+        justify-content: center; 
+        gap: 0.6rem 0.8rem;
+        padding-bottom: 0.8rem;
+        margin-bottom: 0.8rem;
+        border-bottom: 1px solid var(--border-color); 
+    }
+    
+    .nav-links a, .dropdown .dropbtn {
+        font-size: 0.9rem; 
+    }
+
+    /* Center the dropdown menu to prevent right-side screen overflow */
+    .dropdown-content {
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 180px;
+    }
+    .dropdown-content a {
+        text-align: center; /* Center the text for better mobile UX */
+    }
+    
+    /* Center the buttons and make them appropriately sized */
+    .nav-right { 
+        width: 100%;
+        justify-content: center; 
+        gap: 0.8rem; 
+    }
+
+    .theme-toggle {
+        padding: 0.4rem 0.6rem; 
+        font-size: 0.95rem; 
+    }
+
+    .nav-pdf-btn {
+        padding: 0.4rem 0.8rem; 
+        font-size: 0.85rem; 
+    }
+
+    /* 2. Side-by-Side Profile Header */
+    .profile-header {
+        flex-direction: row; 
+        text-align: left;
+        align-items: flex-start;
+        gap: 1rem; 
+        margin-bottom: 1.5rem;
+    }
+    
+    .profile-img {
+        width: 75px; 
+        height: 75px;
+        flex-shrink: 0; 
+        border-width: 2px;
+    }
+    
+    .profile-info {
+        min-width: 0; 
+    }
+    
+    .profile-info h1 {
+        font-size: 1.35rem; 
+        line-height: 1.1;
+        margin-bottom: 0.2rem;
+    }
+    
+    .profile-info > div:nth-child(2) {
+        font-size: 0.85rem !important;
+        margin-bottom: 0.4rem !important;
+        margin-top: 0 !important;
+    }
+
+    .profile-title {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        margin-bottom: 0.4rem;
+    }
+    
+    .location {
+        justify-content: flex-start;
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .social-links { 
+        justify-content: flex-start; 
+        gap: 0.4rem; 
+    }
+    
+    .social-links a {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    /* Card cleanups */
+    .item-header { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 0.2rem; 
+    }
+    
+    section { padding: 1.2rem; } 
+    
+    .projects-grid, .maps-grid { grid-template-columns: 1fr; }
+    .map-controls { justify-content: center; }
+}

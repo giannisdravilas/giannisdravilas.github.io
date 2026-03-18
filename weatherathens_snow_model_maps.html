@@ -1,95 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK7GXEKP2L"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-DK7GXEKP2L');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/weatherathens_snow_model_maps.css" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-    <!-- Add Lightbox CSS and JS links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
-        integrity="sha512-7R0Z7fPpp3zPFJrLkxK+xu23x/AXxGGN+9p0K0LuZ0U7nOD/YkVuOrRNDXR6YFjFv5MQM1vluZu8ayK+fFTp5A=="
-        crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
-        integrity="sha512-DFmqJOpjCry1F5LMz5ijbFpB9NIn1DuK4L1gT+GThN5haFJR8mX/brmQCaDFV2c5fWg0Qe7fUpC5vIhEu0lZEw=="
-        crossorigin="anonymous" defer></script>
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
 
-    <title>Weatherathens Snow Forecasting Model</title>
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+    <title>Operational Forecast Maps - Giannis Dravilas</title>
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-7R0Z7fPpp3zPFJrLkxK+xu23x/AXxGGN+9p0K0LuZ0U7nOD/YkVuOrRNDXR6YFjFv5MQM1vluZu8ayK+fFTp5A==" crossorigin="anonymous" />
+    
+    <style>
+        html.dark-mode .attention-box {
+            background: #450a0a;
+            color: #fecaca;
+            border-color: #991b1b;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 2rem;
+        }
+        .cycle-header {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/weatherathens_snow_model_maps.js"></script>
-    <header id="header">
-        <a href="index.html" class="title">Giannis Dravilas</a>
+    <div class="container">
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="thesis.html">Thesis</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Snow Forecasting Model</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="snow_forecasting_model.html">Description</a></li>
-                        <li><a href="weatherathens_snow_model_maps.html">Operational Forecasts</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="blog.html">Blog</a> 
+                <a href="thesis.html">Thesis</a>
+                <a href="snowly.html">Snowly</a>
+                <div class="dropdown">
+                    <a class="dropbtn">Snow Model <i class="fa-solid fa-caret-down" style="font-size: 0.8em;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="snow_forecasting_model.html">Description</a>
+                        <a href="weatherathens_snow_model_maps.html" class="active">Operational Forecasts</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="https://drive.google.com/file/d/1qAqVp276dXn-zg6NAfdXRZZaONCx45r4/view" target="_blank" class="nav-pdf-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Full PDF CV
+                </a>
+            </div>
         </nav>
-    </header>
-    <h1>Weatherathens Snow Forecasting Model</h1>
 
-    <div>
-        <label for="domain">Select Domain:</label>
-        <select id="domain" onchange="updateImages()">
-            <option value="greece">Greece</option>
-            <option value="central_greece">Central Greece</option>
-            <option value="attica">Attica</option>
-        </select>
+        <section>
+            <h1>Weatherathens Snow Forecasting Model</h1>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Operational maps updated daily based on high-resolution data assimilation.</p>
+
+            <div class="map-controls">
+                <label for="domain" style="font-weight: 600;">Select Domain:</label>
+                <select id="domain" onchange="updateImages()">
+                    <option value="greece">Greece</option>
+                    <option value="central_greece">Central Greece</option>
+                    <option value="attica">Attica</option>
+                    <option value="europe">Europe</option>
+                </select>
+                
+                <div id="dayButtons" style="display: flex; gap: 0.5rem;">
+                    <button onmouseover="showImages(0)" id="dayBtn0">Day 0</button>
+                    <button onmouseover="showImages(1)" id="dayBtn1">Day 1</button>
+                    <button onmouseover="showImages(2)" id="dayBtn2">Day 2</button>
+                    <button onmouseover="showImages(3)" id="dayBtn3">Day 3</button>
+                </div>
+            </div>
+
+            <div id="image-container" class="maps-grid"></div>
+
+            <p class="attention-box" style="margin-top: 2rem; background: #fee2e2; color: #991b1b; padding: 1rem; border-radius: 8px; border: 1px solid #fecaca; transition: all 0.3s ease;">
+                <strong><i class="fa-solid fa-triangle-exclamation"></i> Attention:</strong> Starting 25-12-2024 0z, the model has been updated to use a lower threshold. Snowfall areas are now expected to be generally ~100 m lower than before, closer to the actual minimum snowfall altitude.
+            </p>
+        </section>
+
+        <section>
+            <h2>Update Times (UTC)</h2>
+            
+            <div class="table-container">
+                <table>
+                    <caption>Greece Domain (Greece, Central Greece, Attica - High-Res 400m)</caption>
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Cycle</th>
+                            <th>Day 0</th>
+                            <th>Day 1</th>
+                            <th>Day 2</th>
+                            <th>Day 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2"><strong>ICON-EU</strong></td>
+                            <td>0z</td>
+                            <td>03:20</td>
+                            <td>03:36</td>
+                            <td>03:55</td>
+                            <td>04:04</td>
+                        </tr>
+                        <tr>
+                            <td>12z</td>
+                            <td>15:12</td>
+                            <td>15:27</td>
+                            <td>15:44</td>
+                            <td>15:59</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>GFS</strong></td>
+                            <td>0z</td>
+                            <td>03:42</td>
+                            <td>03:50</td>
+                            <td>03:58</td>
+                            <td>04:08</td>
+                        </tr>
+                        <tr>
+                            <td>12z</td>
+                            <td>15:39</td>
+                            <td>15:47</td>
+                            <td>15:55</td>
+                            <td>16:04</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>GEM</strong></td>
+                            <td>0z</td>
+                            <td>04:30</td>
+                            <td>04:56</td>
+                            <td>05:20</td>
+                            <td>05:42</td>
+                        </tr>
+                        <tr>
+                            <td>12z</td>
+                            <td>16:19</td>
+                            <td>16:43</td>
+                            <td>17:07</td>
+                            <td>17:29</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>IFS</strong></td>
+                            <td>0z</td>
+                            <td>07:41</td>
+                            <td>07:42</td>
+                            <td>07:44</td>
+                            <td>07:46</td>
+                        </tr>
+                        <tr>
+                            <td>12z</td>
+                            <td>19:40</td>
+                            <td>19:42</td>
+                            <td>19:43</td>
+                            <td>19:45</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <caption>Europe Domain (2.5km)</caption>
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Cycle</th>
+                            <th>Day 0</th>
+                            <th>Day 1</th>
+                            <th>Day 2</th>
+                            <th>Day 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2"><strong>ICON-EU</strong></td>
+                            <td>0z</td>
+                            <td>04:23</td>
+                            <td>05:40</td>
+                            <td>06:43</td>
+                            <td>07:18</td>
+                        </tr>
+                        <tr>
+                            <td>12z</td>
+                            <td>15:33</td>
+                            <td>17:01</td>
+                            <td>18:03</td>
+                            <td>18:54</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>GFS</strong></td>
+                            <td>0z</td>
+                            <td>03:59</td>
+                            <td>04:23</td>
+                            <td>04:47</td>
+                            <td>05:09</td>
+                        </tr>
+                        <tr>
+                            <td>12z</td>
+                            <td>15:46</td>
+                            <td>16:12</td>
+                            <td>16:36</td>
+                            <td>16:58</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>GEM</strong></td>
+                            <td>0z</td>
+                            <td>04:36</td>
+                            <td>05:07</td>
+                            <td>05:35</td>
+                            <td>06:01</td>
+                        </tr>
+                        <tr>
+                            <td>12z</td>
+                            <td>16:21</td>
+                            <td>16:51</td>
+                            <td>17:20</td>
+                            <td>17:46</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>IFS</strong></td>
+                            <td>0z</td>
+                            <td>07:42</td>
+                            <td>07:44</td>
+                            <td>07:46</td>
+                            <td>07:56</td>
+                        </tr>
+                        <tr>
+                            <td>12z</td>
+                            <td>19:40</td>
+                            <td>19:43</td>
+                            <td>19:45</td>
+                            <td>19:47</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+                The Snow Forecasting Model is an innovative, ultra-high resolution snowfall prediction system designed specifically for Greece, by Giannis Dravilas. With a spatial resolution of 400 meters, this model revolutionises snowfall forecasting. More information is available <a href="snow_forecasting_model.html">here</a>.
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Giannis Dravilas.</p>
+        </footer>
     </div>
 
-    <div id="dayButtons">
-        <!-- Buttons for each day ahead -->
-        <button onmouseover="showImages(0)" id="dayBtn0">Day 0</button>
-        <button onmouseover="showImages(1)" id="dayBtn1">Day 1</button>
-        <button onmouseover="showImages(2)" id="dayBtn2">Day 2</button>
-        <button onmouseover="showImages(3)" id="dayBtn3">Day 3</button>
-    </div>
-
-    <div id="image-container"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-DFmqJOpjCry1F5LMz5ijbFpB9NIn1DuK4L1gT+GThN5haFJR8mX/brmQCaDFV2c5fWg0Qe7fUpC5vIhEu0lZEw==" crossorigin="anonymous" defer></script>
 
     <script>
         var currentDay = 0;
 
         function showImages(day) {
-            currentDay = day; // Update the current day
-
+            currentDay = day; 
             var domain = document.getElementById("domain").value;
-
             var imageContainer = document.getElementById("image-container");
-            imageContainer.innerHTML = ""; // Clear previous images
+            imageContainer.innerHTML = ""; 
 
             var imagePaths = [
                 `https://snow-model.neocities.org/icon-eu-wet-bulb/accum_snowfall_${domain}_day_${day}_icon-eu_wet_bulb_0_76.png`,
                 `https://snow-model.neocities.org/gfs-wet-bulb/accum_snowfall_${domain}_day_${day}_gfs_wet_bulb_0_76.png`,
                 `https://snow-model.neocities.org/gem-wet-bulb/accum_snowfall_${domain}_day_${day}_gem_wet_bulb_0_76.png`,
+                `https://snow-model.neocities.org/ifs-wet-bulb/accum_snowfall_${domain}_day_${day}_ifs_wet_bulb_0_76.png`,
             ];
 
             imagePaths.forEach(function (path, index) {
@@ -106,7 +297,7 @@
 
                 var text = document.createElement("div");
                 text.className = "image-text";
-                text.textContent = `Daily Snowfall for Day ${day} using ${['ICON-EU', 'GFS', 'GEM'][index]} data`;
+                text.textContent = `Daily Snowfall for Day ${day} using ${['ICON-EU', 'GFS', 'GEM', 'IFS'][index]} data`;
 
                 a.appendChild(img);
                 wrapper.appendChild(a);
@@ -115,11 +306,10 @@
                 imageContainer.appendChild(wrapper);
             });
 
-            enableButtons(); // Enable buttons immediately after updating images
+            enableButtons(); 
         }
 
         function updateImages() {
-            // Display images for the current day when the domain is changed
             showImages(currentDay);
         }
 
@@ -130,84 +320,11 @@
             document.getElementById("dayBtn3").disabled = false;
         }
 
-        // Display day 0 maps by default when the page is opened
         window.onload = function () {
             showImages(0);
         };
     </script>
 
-    <p><strong style="color: red;">Attention:</strong> Starting 25-12-2024 0z, the model has been updated to use a lower threshold.
-        Snowfall areas are now expected to be generally ~100 m lower than before, closer to the actual minimum snowfall altitude.</p>
-
-    <br>
-    <p style="text-align:left; font-size:18px"><b>Update Times (UTC):</b></p>
-    <table>
-        <caption>0z:</caption>
-        <tr>
-            <th>Model / Day Ahead</th>
-            <th>0</th>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-        </tr>
-        <tr>
-            <td>Using ICON-EU</td>
-            <td>03:14</td>
-            <td>03:37</td>
-            <td>03:58</td>
-            <td>04:18</td>
-        </tr>
-        <tr>
-            <td>Using GFS</td>
-            <td>03:52</td>
-            <td>04:05</td>
-            <td>04:23</td>
-            <td>04:37</td>
-        </tr>
-        <tr>
-            <td>Using GEM</td>
-            <td>04:53</td>
-            <td>05:17</td>
-            <td>05:41</td>
-            <td>06:04</td>
-        </tr>
-    </table>
-
-    <table>
-        <caption>12z:</caption>
-        <tr>
-            <th>Model / Day Ahead</th>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-        </tr>
-        <tr>
-            <td>Using ICON-EU</td>
-            <td>15:14</td>
-            <td>15:39</td>
-            <td>15:58</td>
-        </tr>
-        <tr>
-            <td>Using GFS</td>
-            <td>15:53</td>
-            <td>16:07</td>
-            <td>16:22</td>
-        </tr>
-        <tr>
-            <td>Using GEM</td>
-            <td>16:53</td>
-            <td>17:18</td>
-            <td>17:42</td>
-        </tr>
-    </table>
-
-    <br>
-    <p style="text-align:left; font-size:14px">The Snow Forecasting Model is an innovative, ultra-high resolution snowfall
-        prediction system designed specifically for Greece, by <a
-            href="https://www.linkedin.com/in/giannis-dravilas/">Giannis Dravilas</a>. With a spatial resolution of 400
-        meters, this model revolutionizes snowfall forecasting, covering every corner of Greece and even extending beyond
-        its borders. More information is available <a href="snow_forecasting_model.html">here</a>.</p>
-
+    <script src="assets/js/theme.js"></script>
 </body>
-
 </html>
