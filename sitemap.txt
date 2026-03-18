@@ -1,4 +1,7 @@
 https://giannisdravilas.github.io/
 https://giannisdravilas.github.io/index.html
+https://giannisdravilas.github.io/blog.html
 https://giannisdravilas.github.io/thesis.html
+https://giannisdravilas.github.io/snowly.html
 https://giannisdravilas.github.io/snow_forecasting_model.html
+https://giannisdravilas.github.io/weatherathens_snow_model_maps.html

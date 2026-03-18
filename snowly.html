@@ -10,7 +10,7 @@
 
 	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-    <title>Snow Forecasting Model - Giannis Dravilas</title>
+    <title>Snowly.eu - Giannis Dravilas</title>
     
     <script>
         if (localStorage.getItem('theme') === 'dark') {
@@ -28,11 +28,11 @@
                 <a href="index.html">Home</a>
                 <a href="blog.html">Blog</a> 
                 <a href="thesis.html">Thesis</a>
-                <a href="snowly.html">Snowly</a>
+                <a href="snowly.html" class="active">Snowly</a>
                 <div class="dropdown">
                     <a class="dropbtn">Snow Model <i class="fa-solid fa-caret-down" style="font-size: 0.8em;"></i></a>
                     <div class="dropdown-content">
-                        <a href="snow_forecasting_model.html" class="active">Description</a>
+                        <a href="snow_forecasting_model.html">Description</a>
                         <a href="weatherathens_snow_model_maps.html">Operational Forecasts</a>
                     </div>
                 </div>
@@ -48,16 +48,20 @@
         </nav>
 
         <section>
-            <h1>Snow Forecasting Model</h1>
-            <p style="color: var(--text-muted); margin-bottom: 2rem;">A high-resolution snowfall prediction system developed specifically for Greece.</p>
+            <h1>Snowly.eu</h1>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Interactive 2D & 3D High-Resolution Snowfall Forecasts.</p>
 
-            <p>With a spatial resolution of 400 meters, the model provides detailed and precise snowfall forecasts, covering Greece and its neighbouring countries. It utilises temperature, humidity, geopotential height and precipitation data from numerical weather models such as ICON-EU, IFS, GFS and GEM.</p>
+            <p><strong>Snowly.eu</strong> is a custom-built web application designed to provide the general public and weather enthusiasts with highly accurate, easy-to-read snowfall forecasts across Europe. We built this together with Giorgos Kyros.</p>
+            
+            <p>We achieved this by building a pipeline that downscales outputs from major Numerical Weather Prediction (NWP) models (including ICON-EU, IFS, GFS and GEM). This allows us to provide an incredible <strong>400m spatial resolution</strong> over Greece and a detailed 2.5km resolution across the rest of Europe.</p>
 
-            <p>This data is used as input to an algorithm that accounts for snow melting processes, identifying areas likely to experience snowfall during approaching cold fronts.</p>
+            <p>The platform features both 2D mapping and interactive 3D visualisations to help users understand exactly how terrain impacts incoming weather fronts.</p>
 
-            <p>The key feature of the model is its complex mapping process. Potential snowfall regions are projected onto a high-resolution topographic grid consisting of approximately 6 million points. The model's vertical dimension consists of 400 levels (vertical resolution of approx. 10 meters), so the resulting three-dimensional grid encompasses a total of 2.5 billion points. By repeating the process over multiple time steps, a cumulative snowfall map is created.</p>
-
-            <p>Since January 2022, the Snow Forecasting Model has been used operationally by <a href="https://weatherathens.blogspot.gr/" target="_blank">Weatherathens</a>. The ultimate goal is to make snowfall predictions accessible and understandable to the public, translating complex meteorological data into user-friendly, actionable information.</p>
+            <div style="margin-top: 2rem;">
+                <a href="https://snowly.eu" target="_blank" class="nav-pdf-btn" style="display: inline-flex; width: auto; font-size: 1.1rem; padding: 0.6rem 1.5rem;">
+                    <i class="fa-solid fa-snowflake"></i> Open Snowly.eu
+                </a>
+            </div>
         </section>
 
         <footer>

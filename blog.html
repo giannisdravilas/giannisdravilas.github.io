@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+    <title>Blog - Giannis Dravilas</title>
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="thesis.html">Thesis</a>
+                <a href="snowly.html">Snowly</a>
+                <div class="dropdown">
+                    <a class="dropbtn">Snow Model <i class="fa-solid fa-caret-down" style="font-size: 0.8em;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="snow_forecasting_model.html">Description</a>
+                        <a href="weatherathens_snow_model_maps.html">Operational Forecasts</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="https://drive.google.com/file/d/1qAqVp276dXn-zg6NAfdXRZZaONCx45r4/view" target="_blank" class="nav-pdf-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Full PDF CV
+                </a>
+            </div>
+        </nav>
+
+        <section id="blog-feed">
+            <h1>Latest Updates</h1>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Thoughts, research updates and new project launches.</p>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Abstract Accepted to EGU General Assembly 2026</span>
+                    <span class="item-date">Feb 2026</span>
+                </div>
+                <p>I am happy to share that our collaborative work with <a href="https://vu.nl/en" target="_blank">Vrije Universiteit Amsterdam</a>, <em>Burning Lowlands: A Serious Game to Evaluate Citizen Learning, Communication, and Decision-Making in Climate Adaptation</em>, has been accepted for presentation at the <a href="https://www.egu26.eu/" target="_blank">EGU General Assembly 2026</a>. You can read the abstract <a href="https://meetingorganizer.copernicus.org/EGU26/EGU26-15019.html" target="_blank">here</a>. See you in Vienna on May 8! 🇦🇹</p>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">InfoCIR accepted to IEEE PacificVis 2026</span>
+                    <span class="item-date">Jan 2026</span>
+                </div>
+                <p>Excited to announce that our paper, <em>InfoCIR: Multimedia Analysis for Composed Image Retrieval</em>, has been accepted for publication at the conference proceedings of <a href="https://pacificvis2026.github.io/" target="_blank">IEEE PacificVis 2026</a>. You can read the preprint on <a href="https://arxiv.org/abs/2602.13402v1" target="_blank">arXiv</a>. I will present this work in Sydney on 22nd April. See you in Sydney! 🇦🇺</p>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Starting my thesis at UvA in collaboration with EUMETSAT</span>
+                    <span class="item-date">Jan 2026</span>
+                </div>
+                <p>I am thrilled to announce the start of my Master's Thesis project at the <a href="https://www.uva.nl/en" target="_blank">University of Amsterdam (UvA)</a>, working in collaboration with <a href="https://www.eumetsat.int/" target="_blank">EUMETSAT</a>. My research will focus on <em>ML-Based Feature Detection on GEO-Ring Satellite Data</em>.</p>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Official Launch of snowly.eu</span>
+                    <span class="item-date">Dec 2025</span>
+                </div>
+                <p>Together with Giorgos Kyros, we have officially launched <a href="https://snowly.eu" target="_blank">snowly.eu</a>! It is a web application providing interactive 2D and 3D snowfall forecast maps for Europe, based on downscaled NWP models at an ultra-high 400m spatial resolution. Go check it out!</p>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Starting my internship at EUMETSAT</span>
+                    <span class="item-date">Aug 2025</span>
+                </div>
+                <p>I am thrilled to join the Digital Solutions and SAF Division at <a href="https://www.eumetsat.int/" target="_blank">EUMETSAT</a> in Darmstadt, Germany. Over the coming months, I will be exploring data management concepts in support of establishing AI factories in the context of Destination Earth, applying Vision Transformers (ViTs) and CNNs to MTG and OPERA remote sensing data. I'll also be building cloud-native ML workflows on the DestinE S3 Data Lake and scaling model training across mult-node HPC environments.</p>
+            </div>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Starting my MSc in Artificial Intelligence</span>
+                    <span class="item-date">Sep 2024</span>
+                </div>
+                <p>I am excited to share that I have officially started my <a href="https://www.uva.nl/shared-content/programmas/en/masters/artificial-intelligence/artificial-intelligence.html" target="_blank">Master of Science in Artificial Intelligence</a> at the <a href="https://www.uva.nl/en" target="_blank">University of Amsterdam (UvA)</a>. I am looking forward to diving deeper into advanced machine learning architectures over the next two years!</p>
+            </div>
+            
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Giannis Dravilas.</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>
