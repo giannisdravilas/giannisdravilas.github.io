@@ -40,15 +40,15 @@ body {
 .container {
     max-width: 1050px;
     margin: 0 auto;
-    padding: 1.5rem 1.5rem 3rem; 
+    padding: 1rem 1.5rem 3rem;
 }
 
 section {
     background-color: var(--bg-card);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border: 1px solid var(--border-color);
 }
 
@@ -97,8 +97,8 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2rem;
-    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    padding: 0.7rem 1.5rem;
     background-color: var(--bg-card);
     border-radius: 12px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -217,6 +217,23 @@ nav a:hover, nav a.active {
     display: block;
 }
 
+/* Combined site header (desktop: stacked, each child styled independently) */
+.site-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header nav {
+    order: -1;
+    margin-bottom: 0.75rem;
+}
+
+.site-header .profile-header {
+    margin-bottom: 1rem;
+    gap: 1rem;
+    padding: 0.6rem 0.2rem;
+}
+
 /* Profile Header (Compact Desktop) */
 .profile-header {
     display: flex;
@@ -227,8 +244,8 @@ nav a:hover, nav a.active {
 }
 
 .profile-img {
-    width: 110px; 
-    height: 110px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--bg-card);
@@ -240,8 +257,16 @@ nav a:hover, nav a.active {
 }
 
 .profile-info h1 {
-    font-size: 1.8rem; 
-    margin-bottom: 0; 
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.alt-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-top: -0.3rem;
+    margin-bottom: 0.2rem;
 }
 
 .profile-title {
@@ -252,28 +277,39 @@ nav a:hover, nav a.active {
 }
 
 .location {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 0.6rem; 
+    margin-bottom: 0.6rem;
     display: flex;
     align-items: center;
     gap: 0.4rem;
 }
 
+.profile-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.8rem;
+}
+
+.profile-meta .location {
+    margin-bottom: 0;
+}
+
 .social-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem; 
+    gap: 0.5rem;
 }
 
 .social-links a {
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
-    font-size: 0.85rem; 
+    justify-content: center;
+    font-size: 0.85rem;
     color: var(--text-muted);
     background-color: var(--bg-card);
-    padding: 0.3rem 0.6rem; 
+    padding: 0.3rem 0.4rem;
     border-radius: 6px;
     border: 1px solid var(--border-color);
     text-decoration: none;
@@ -477,21 +513,51 @@ footer {
 @media (max-width: 768px) {
     .container { padding: 1rem 1rem 2rem; }
     
-    /* 1. Clearer Nav Hierarchy */
-    nav { 
-        flex-direction: column; 
-        padding: 0.8rem 1rem; 
-        margin-bottom: 1.5rem; 
-        gap: 0; 
+    /* Combined site header mobile — one card wrapping nav + profile */
+    .site-header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+        margin-bottom: 1rem;
+        background-color: var(--bg-card);
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        border: 1px solid var(--border-color);
     }
-    
-    .nav-links { 
+
+    .site-header nav {
+        order: -1;
         width: 100%;
-        justify-content: center; 
-        gap: 0.6rem 0.8rem;
-        padding-bottom: 0.8rem;
-        margin-bottom: 0.8rem;
-        border-bottom: 1px solid var(--border-color); 
+        padding: 0 0 0.8rem 0;
+        margin: 0 0 0.8rem 0;
+        border-bottom: 1px solid var(--border-color);
+        background: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .site-header .profile-header {
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    /* 1. Clearer Nav Hierarchy */
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.7rem 1rem;
+        margin-bottom: 1rem;
+        gap: 0.4rem 0.7rem;
+    }
+
+    .nav-links {
+        width: auto;
+        justify-content: center;
+        gap: 0.4rem 0.7rem;
     }
     
     .nav-links a, .dropdown .dropbtn {
@@ -509,10 +575,10 @@ footer {
     }
     
     /* Center the buttons and make them appropriately sized */
-    .nav-right { 
-        width: 100%;
-        justify-content: center; 
-        gap: 0.8rem; 
+    .nav-right {
+        width: auto;
+        justify-content: center;
+        gap: 0.8rem;
     }
 
     .theme-toggle {
@@ -535,8 +601,8 @@ footer {
     }
     
     .profile-img {
-        width: 75px; 
-        height: 75px;
+        width: 55px;
+        height: 55px;
         flex-shrink: 0; 
         border-width: 2px;
     }
@@ -551,12 +617,6 @@ footer {
         margin-bottom: 0.2rem;
     }
     
-    .profile-info > div:nth-child(2) {
-        font-size: 0.85rem !important;
-        margin-bottom: 0.4rem !important;
-        margin-top: 0 !important;
-    }
-
     .profile-title {
         font-size: 0.85rem;
         line-height: 1.3;
@@ -575,8 +635,8 @@ footer {
     }
     
     .social-links a {
-        font-size: 0.75rem;
-        padding: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+        padding: 0.3rem 0.4rem;
     }
 
     /* Card cleanups */
