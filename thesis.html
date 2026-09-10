@@ -58,12 +58,60 @@
         </nav>
 
         <section>
-            <h1>MSc Thesis: ML-Based Feature Detection on GEO-Ring Satellite Data</h1>
-            <p style="color: var(--text-muted); margin-bottom: 2rem;">Master's Thesis | Jan 2026 - Jun 2026 (In Progress) | <a href="https://uva.nl/en" target="_blank">University of Amsterdam</a> & <a href="https://eumetsat.int/" target="_blank">EUMETSAT</a></p>
+            <h1>MSc Thesis: SATFRONT - Detecting Atmospheric Fronts from Satellite Data using Deep Learning</h1>
 
-            <p>I am currently conducting my Master's thesis research at the University of Amsterdam, in collaboration with the Digital Solutions and SAF Division, as well as the User Support and Climate Services (USC) Division of the European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT). My research focuses on leveraging Machine Learning techniques to detect features using GEO-Ring satellite data.</p>
-            
-            <p>This project aims to enhance our understanding and automated monitoring of complex atmospheric features. I am being supervised by <a href="https://scholar.google.com/citations?user=tQPUCysAAAAJ&hl=en" target="_blank">Ana Lučić</a> from the University of Amsterdam, alongside Miruna Stoicescu and <a href="https://scholar.google.com/citations?user=sGTlCGsAAAAJ&hl=en" target="_blank">Roope Tervo</a> from EUMETSAT.</p>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                MSc Artificial Intelligence Thesis | Jan 2026 - Jun 2026 | Grade: 9/10 |
+                <a href="https://uva.nl/en" target="_blank">University of Amsterdam</a> &amp;
+                <a href="https://eumetsat.int/" target="_blank">EUMETSAT</a>
+            </p>
+
+            <p>
+                My Master's thesis, conducted at the University of Amsterdam in collaboration with EUMETSAT,
+                introduced <strong>SATFRONT</strong>, a deep learning framework for detecting cold, warm and
+                occluded atmospheric fronts over Europe directly from geostationary satellite observations.
+                The work addresses the limited availability of machine-readable frontal analyses and the
+                reliance of existing automated approaches on numerical weather prediction and reanalysis data.
+            </p>
+
+            <p>
+                I developed an end-to-end research pipeline combining GEO-Ring satellite observations,
+                ERA5 reanalysis data and frontal analyses from five European national meteorological services.
+                I evaluated convolutional and transformer-based segmentation architectures, including an
+                Aurora-inspired Swin-UNet, and developed a multi-agency learning approach with a shared encoder
+                and agency-specific output heads. I also investigated temporal modelling and self-supervised
+                pre-training on the unlabelled satellite and ERA5 archive.
+            </p>
+
+            <p>
+                The best satellite-only model demonstrated that multi-class atmospheric fronts can be detected
+                directly from satellite observations, achieving a 150 km neighbourhood Critical Success Index
+                (CSI) of 0.428 on the UK Met Office test data. Incorporating ERA5 increased the CSI to 0.591,
+                outperforming the operational NWC SAF ASII baseline and reaching a level comparable to, or
+                better than, the agreement between independent meteorological agencies.
+            </p>
+
+            <p>
+                Finally, I deployed the satellite-only model in a fully automated near-real-time web application
+                using MSG SEVIRI observations. The system generates cold, warm and occluded front analyses every
+                30 minutes and provides a rolling 48-hour view of frontal evolution.
+            </p>
+
+            <p>
+                Supervisors: Miruna Stoicescu,
+                <a href="https://scholar.google.com/citations?user=sGTlCGsAAAAJ&hl=en" target="_blank">Roope Tervo</a>,
+                Carlos Horn, Oriol Hinojo Comellas,
+                <a href="https://scholar.google.com/citations?user=oEhF4KEAAAAJ&hl=en" target="_blank">Sina Montazeri</a>,
+                <a href="https://scholar.google.com/citations?user=upNHWNsAAAAJ&hl=en" target="_blank">Andrea Meraner</a>
+                (EUMETSAT);
+                <a href="https://a-lucic.github.io/" target="_blank">Ana Lučić</a> (UvA).
+            </p>
+
+            <div style="margin-top: 2rem;">
+                <a href="https://scripties.uba.uva.nl/search?id=record_58543;setlang=en" target="_blank" class="nav-pdf-btn" style="display: inline-flex; width: auto;">
+                    <i class="fa-solid fa-book-open"></i> Read the Full Paper
+                </a>
+            </div>
         </section>
 
         <section>

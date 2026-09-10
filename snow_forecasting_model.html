@@ -60,15 +60,25 @@
         <section>
             <h1>Snow Forecasting Model</h1>
             <p style="color: var(--text-muted); margin-bottom: 2rem;">A high-resolution snowfall prediction system developed specifically for Greece.</p>
+            <p>
+                The <strong>Snow Forecasting Model</strong> is a high-resolution forecasting system I developed for Greece and neighbouring regions. It produces snowfall forecasts at a spatial resolution of <strong>400 m</strong>, using temperature, humidity, geopotential height and precipitation data from major Numerical Weather Prediction (NWP) models such as ICON-EU, IFS, GFS and GEM.
+            </p>
 
-            <p>With a spatial resolution of 400 meters, the model provides detailed and precise snowfall forecasts, covering Greece and its neighbouring countries. It utilises temperature, humidity, geopotential height and precipitation data from numerical weather models such as ICON-EU, IFS, GFS and GEM.</p>
+            <p>
+                These forecasts are processed through an algorithm that accounts for snow melting and vertical temperature structure, helping determine where precipitation is most likely to fall as snow during approaching cold-weather events.
+            </p>
 
-            <p>This data is used as input to an algorithm that accounts for snow melting processes, identifying areas likely to experience snowfall during approaching cold fronts.</p>
+            <p>
+                A key part of the system is its high-resolution terrain mapping. Potential snowfall areas are projected onto a topographic grid of approximately <strong>6 million points</strong>, with around <strong>400 vertical levels</strong> at roughly 10 m spacing. This produces a three-dimensional grid of about <strong>2.5 billion points</strong>, which is evaluated across successive forecast time steps to generate cumulative snowfall maps.
+            </p>
 
-            <p>The key feature of the model is its complex mapping process. Potential snowfall regions are projected onto a high-resolution topographic grid consisting of approximately 6 million points. The model's vertical dimension consists of 400 levels (vertical resolution of approx. 10 meters), so the resulting three-dimensional grid encompasses a total of 2.5 billion points. By repeating the process over multiple time steps, a cumulative snowfall map is created.</p>
-
-            <p>Since January 2022, the Snow Forecasting Model has been used operationally by <a href="https://weatherathens.blogspot.gr/" target="_blank">Weatherathens</a>. The ultimate goal is to make snowfall predictions accessible and understandable to the public, translating complex meteorological data into user-friendly, actionable information.</p>
+            <p>
+                Since January 2022, the model has been used operationally by
+                <a href="https://weatherathens.blogspot.gr/" target="_blank">Weatherathens</a>,
+                translating numerical weather model output into detailed snowfall forecasts that are easier to interpret and communicate to the public.
+            </p>
         </section>
+
 
         <footer>
             <p>&copy; 2026 Giannis Dravilas.</p>
