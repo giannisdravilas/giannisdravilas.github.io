@@ -1,0 +1,22 @@
+# Giannis Dravilas
+
+> Giannis (Ioannis) Dravilas is a Data Scientist and AI Researcher specialising in Machine Learning for Earth Observation, weather and climate. This is his personal portfolio.
+
+Giannis holds an MSc in Artificial Intelligence from the University of Amsterdam (thesis in collaboration with EUMETSAT) and works on deep learning applied to satellite data, numerical weather prediction and high-resolution snowfall forecasting.
+
+## Pages
+
+- [Home / Portfolio](https://giannisdravilas.github.io/): Overview, biography, publications, projects and CV of Giannis Dravilas.
+- [Blog](https://giannisdravilas.github.io/blog.html): Thoughts, research updates and new project launches.
+- [MSc Thesis – SATFRONT](https://giannisdravilas.github.io/thesis.html): Detecting atmospheric fronts from satellite data using deep learning (University of Amsterdam & EUMETSAT).
+- [Snowly.eu](https://giannisdravilas.github.io/snowly.html): Interactive 2D & 3D high-resolution snowfall forecasts across Europe.
+- [Snow Forecasting Model](https://giannisdravilas.github.io/snow_forecasting_model.html): A high-resolution (400 m) snowfall prediction system for Greece.
+- [Operational Forecast Maps](https://giannisdravilas.github.io/weatherathens_snow_model_maps.html): Operational high-resolution snowfall forecast maps for Greece.
+
+## Profiles
+
+- [GitHub](https://github.com/giannisdravilas)
+- [LinkedIn](https://www.linkedin.com/in/giannis-dravilas/)
+- [Google Scholar](https://scholar.google.com/citations?user=yJq1Z68AAAAJ)
+- [ResearchGate](https://www.researchgate.net/profile/Ioannis-Dravilas)
+- [ORCID](https://orcid.org/0009-0009-3859-2412)
