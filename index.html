@@ -99,6 +99,36 @@
         .feature-list strong {
             color: var(--text-main);
         }
+        #education .education-details {
+            list-style: none;
+            margin: 0.75rem 0;
+            padding: 0.1rem 0 0.1rem 1rem;
+            border-left: 2px solid var(--border-color);
+        }
+        #education .education-details li {
+            padding-left: 0;
+            margin-bottom: 0.6rem;
+        }
+        #education .education-details li:last-child { margin-bottom: 0; }
+        #education .education-details li::before { content: none; }
+        #education .education-supervisors {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            opacity: 0.85;
+            margin: 0.65rem 0 0;
+        }
+        #education .education-supervisors strong { color: inherit; font-weight: 600; }
+        #publications .pub-list { list-style: none; margin: 1rem 0 0; padding: 0; }
+        #publications .pub-list > li { position: relative; padding-left: 1.8rem; margin-bottom: 1.1rem; }
+        #publications .pub-list > li::before { content: '\f0da'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; top: 0.15rem; color: var(--accent-hover); font-size: 0.9rem; }
+        #publications .pub-title { font-size: 1rem; font-weight: 700; line-height: 1.5; margin-bottom: 0.3rem; color: var(--text-main); }
+        #publications .pub-authors { font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); }
+        #publications .pub-authors strong { font-weight: 600; color: var(--text-main); }
+        #publications .pub-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.75rem; margin-top: 0.3rem; font-size: 0.85rem; line-height: 1.5; color: var(--text-muted); }
+        #publications .pub-meta a { font-weight: 500; text-decoration: none; white-space: nowrap; }
+        #publications .pub-meta a:hover { text-decoration: underline; text-underline-offset: 3px; }
+        #publications .pub-note { font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; }
     </style>
 </head>
 <body>
@@ -268,11 +298,11 @@
                 <ul class="feature-list">
                     <li>
                         <strong>Thesis:</strong> <a href="https://dspace.uba.uva.nl/server/api/core/bitstreams/3a1629cb-9b83-44c2-a1ca-7b653ddefb88/content" target="_blank"><em>SATFRONT: Detecting Atmospheric Fronts from Satellite Data using Deep Learning</em></a> (<a href="https://arxiv.org/abs/2610.42111" target="_blank">arXiv</a>), in collaboration with EUMETSAT.
-                        <ul>
+                        <ul class="education-details">
                             <li>Developed a Swin-UNet to detect cold, warm and occluded fronts from GEO-Ring satellite observations, trained on analyses from five European meteorological services.</li>
                             <li>Built an 18 TB AI-ready GEO-Ring/ERA5 dataset using Zarr and S3 on Destination Earth, plus a web demo producing near-real-time frontal analyses every 30 minutes.</li>
                         </ul>
-                        Supervisors: Miruna Stoicescu, <a href="https://scholar.google.com/citations?user=sGTlCGsAAAAJ&hl=en" target="_blank">Roope Tervo</a>, Carlos Horn, Oriol Hinojo Comellas, <a href="https://scholar.google.com/citations?user=oEhF4KEAAAAJ&hl=en" target="_blank">Sina Montazeri</a>, <a href="https://scholar.google.com/citations?user=upNHWNsAAAAJ&hl=en" target="_blank">Andrea Meraner</a> (EUMETSAT); <a href="https://a-lucic.github.io/" target="_blank">Ana Lučić</a> (UvA).
+                        <p class="education-supervisors"><strong>Supervisors:</strong> Miruna Stoicescu, <a href="https://scholar.google.com/citations?user=sGTlCGsAAAAJ&hl=en" target="_blank">Roope Tervo</a>, Carlos Horn, Oriol Hinojo Comellas, <a href="https://scholar.google.com/citations?user=oEhF4KEAAAAJ&hl=en" target="_blank">Sina Montazeri</a>, <a href="https://scholar.google.com/citations?user=upNHWNsAAAAJ&hl=en" target="_blank">Andrea Meraner</a> (EUMETSAT); <a href="https://a-lucic.github.io/" target="_blank">Ana Lučić</a> (UvA).</p>
                     </li>
                     <li>
                         <strong>Research &amp; Publications:</strong> An <a href="https://arxiv.org/abs/2610.42111" target="_blank">arXiv preprint</a> on atmospheric front detection, two journal submissions on Vision Transformers (<a href="https://arxiv.org/abs/2603.25803" target="_blank">1</a>, <a href="https://openreview.net/forum?id=QeERUU3GEB" target="_blank">2</a>), one Information Retrieval submission (under review), and a Human-Computer Interaction <a href="https://doi.org/10.1109/PacificVis68791.2026.00041" target="_blank">paper</a> presented at IEEE PacificVis 2026.
@@ -291,10 +321,10 @@
                 <ul class="feature-list">
                     <li>
                         <strong>Thesis:</strong> <a href="https://pergamos.lib.uoa.gr/uoa/dl/object/3338966/file.pdf" target="_blank"><em>Machine Learning Snowfall Retrieval Algorithms for Satellite Precipitation Estimates</em></a>, developed in collaboration with IERSD/NOA.
-                        <ul>
+                        <ul class="education-details">
                             <li>Selected for the department's annual <a href="https://www.di.uoa.gr/sites/default/files/documents/Studbook2024.pdf" target="_blank">e-book</a> showcasing outstanding theses and resulted in a peer-reviewed <a href="https://www.mdpi.com/2673-4931/26/1/103" target="_blank">publication</a>.</li>
                         </ul>
-                        Supervisors: <a href="https://cgi.di.uoa.gr/~koubarak/" target="_blank">Manolis Koubarakis</a> (NKUA); <a href="https://scholar.google.com/citations?user=HrfZWgEAAAAJ&hl=en" target="_blank">Stavros Dafis</a>, <a href="https://scholar.google.com/citations?user=PNfCK7oAAAAJ&hl=en" target="_blank">Georgios Kyros</a>, <a href="https://scholar.google.com/citations?user=Sph98NkAAAAJ&hl=en" target="_blank">Kostas Lagouvardos</a> (NOA).
+                        <p class="education-supervisors"><strong>Supervisors:</strong> <a href="https://cgi.di.uoa.gr/~koubarak/" target="_blank">Manolis Koubarakis</a> (NKUA); <a href="https://scholar.google.com/citations?user=HrfZWgEAAAAJ&hl=en" target="_blank">Stavros Dafis</a>, <a href="https://scholar.google.com/citations?user=PNfCK7oAAAAJ&hl=en" target="_blank">Georgios Kyros</a>, <a href="https://scholar.google.com/citations?user=Sph98NkAAAAJ&hl=en" target="_blank">Kostas Lagouvardos</a> (NOA).</p>
                     </li>
                 </ul>
             </div>
@@ -304,52 +334,52 @@
             <h2>Publications & Research</h2>
             <ul class="pub-list">
                 <li>
-                    <strong>SATFRONT: Detecting Atmospheric Fronts with Satellite Data using Machine Learning</strong><br>
-                    <span class="pub-authors"><strong>I. Dravilas</strong>, M. Stoicescu, R. Tervo, C. Horn, O. Hinojo Comellas, S. Montazeri, A. Meraner, A. Lucic.</span>
-                    <em>arXiv preprint, 2026.</em> <a href="https://arxiv.org/abs/2610.42111" target="_blank">[arXiv]</a>
+                    <div class="pub-title">SATFRONT: Detecting Atmospheric Fronts with Satellite Data using Machine Learning</div>
+                    <div class="pub-authors"><strong>I. Dravilas</strong>, M. Stoicescu, R. Tervo, C. Horn, O. Hinojo Comellas, S. Montazeri, A. Meraner, A. Lucic.</div>
+                    <div class="pub-meta"><span>arXiv preprint, 2026.</span> <a href="https://arxiv.org/abs/2610.42111" target="_blank" rel="noopener noreferrer">arXiv ↗</a></div>
                 </li>
                 <li>
-                    <strong>Deep Learning-Based Radar Reflectivity Estimation from MTG-FCI and LI Observations</strong><br>
-                    <span class="pub-authors">A. Meraner, <strong>I. Dravilas</strong>, O. Hinojo Comellas, S. Montazeri, M. Stoicescu, A. Burini.</span>
-                    <em>EUMETSAT Meteorological Satellite Conference, 2026.</em> <a href="https://program-eumetsat2026.kuoni-congress.info/presentation/deep-learning-based-radar-reflectivity-estimation-from-mtg-fci-and-li-observations-487" target="_blank">[Abstract]</a>
+                    <div class="pub-title">Deep Learning-Based Radar Reflectivity Estimation from MTG-FCI and LI Observations</div>
+                    <div class="pub-authors">A. Meraner, <strong>I. Dravilas</strong>, O. Hinojo Comellas, S. Montazeri, M. Stoicescu, A. Burini.</div>
+                    <div class="pub-meta"><span>EUMETSAT Meteorological Satellite Conference, 2026.</span> <a href="https://program-eumetsat2026.kuoni-congress.info/presentation/deep-learning-based-radar-reflectivity-estimation-from-mtg-fci-and-li-observations-487" target="_blank" rel="noopener noreferrer">Abstract ↗</a></div>
                 </li>
                 <li>
-                    <strong>Burning Lowlands: A Serious Game to Evaluate Citizen Learning, Communication, and Decision-Making in Climate Adaptation</strong><br>
-                    <span class="pub-authors">M. Mijailović, D. Roos, H. Bos, I. Beumer, <strong>I. Dravilas</strong>, Y. Kenar, E. Krasauskaite.</span>
-                    <em>EGU General Assembly, 2026.</em> <a href="https://doi.org/10.5194/egusphere-egu26-15019" target="_blank">[DOI]</a>
+                    <div class="pub-title">Burning Lowlands: A Serious Game to Evaluate Citizen Learning, Communication, and Decision-Making in Climate Adaptation</div>
+                    <div class="pub-authors">M. Mijailović, D. Roos, H. Bos, I. Beumer, <strong>I. Dravilas</strong>, Y. Kenar, E. Krasauskaite.</div>
+                    <div class="pub-meta"><span>EGU General Assembly, 2026.</span> <a href="https://doi.org/10.5194/egusphere-egu26-15019" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
                 </li>
                 <li>
-                    <strong>InfoCIR: Multimedia Analysis for Composed Image Retrieval</strong><br>
-                    <span class="pub-authors"><strong>I. Dravilas*</strong>, I. Kapetangeorgis*, A. Latsoudis*, C. McCarthy, G. Marcelino, M. Worring.</span>
-                    <em>2026 IEEE 19th Pacific Visualization Conference (PacificVis), Sydney, Australia, 2026.</em> <a href="https://doi.org/10.1109/PacificVis68791.2026.00041" target="_blank">[DOI]</a>
+                    <div class="pub-title">InfoCIR: Multimedia Analysis for Composed Image Retrieval</div>
+                    <div class="pub-authors"><strong>I. Dravilas*</strong>, I. Kapetangeorgis*, A. Latsoudis*, C. McCarthy, G. Marcelino, M. Worring.</div>
+                    <div class="pub-meta"><span>2026 IEEE 19th Pacific Visualization Conference (PacificVis), Sydney, Australia, 2026.</span> <a href="https://doi.org/10.1109/PacificVis68791.2026.00041" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
                 </li>
                 <li>
-                    <strong>Do All Vision Transformers Need Registers? A Cross-Architectural Reassessment</strong><br>
-                    <span class="pub-authors">S. Baxevanakis*, P. Karageorgis*, <strong>I. Dravilas</strong>, K. Szewczyk.</span>
-                    <em>Submitted to TMLR.</em> <a href="https://arxiv.org/abs/2603.25803" target="_blank">[arXiv]</a>
+                    <div class="pub-title">Do All Vision Transformers Need Registers? A Cross-Architectural Reassessment</div>
+                    <div class="pub-authors">S. Baxevanakis*, P. Karageorgis*, <strong>I. Dravilas</strong>, K. Szewczyk.</div>
+                    <div class="pub-meta"><span>Submitted to TMLR.</span> <a href="https://arxiv.org/abs/2603.25803" target="_blank" rel="noopener noreferrer">arXiv ↗</a></div>
                 </li>
                 <li>
-                    <strong>Reproducibility Study of FairViT: Fair Vision Transformer via Adaptive Masking</strong><br>
-                    <span class="pub-authors">O. Boufalis*, <strong>I. Dravilas*</strong>, P. A. Gkotsi*, A. Latsoudis*.</span>
-                    <em>Submitted to TMLR.</em> <a href="https://openreview.net/forum?id=QeERUU3GEB" target="_blank">[OpenReview]</a>
+                    <div class="pub-title">Reproducibility Study of FairViT: Fair Vision Transformer via Adaptive Masking</div>
+                    <div class="pub-authors">O. Boufalis*, <strong>I. Dravilas*</strong>, P. A. Gkotsi*, A. Latsoudis*.</div>
+                    <div class="pub-meta"><span>Submitted to TMLR.</span> <a href="https://openreview.net/forum?id=QeERUU3GEB" target="_blank" rel="noopener noreferrer">OpenReview ↗</a></div>
                 </li>
                 <li>
-                    <strong>Connectivity Requirements and Network Design for HPC Systems in Europe: Summary Report</strong><br>
-                    <span class="pub-authors">EuroHyPerCon Consortium.</span>
-                    <em>Publications Office of the European Union, 2025.</em> <a href="https://doi.org/10.2793/4687161" target="_blank">[DOI]</a>
+                    <div class="pub-title">Connectivity Requirements and Network Design for HPC Systems in Europe: Summary Report</div>
+                    <div class="pub-authors">EuroHyPerCon Consortium.</div>
+                    <div class="pub-meta"><span>Publications Office of the European Union, 2025.</span> <a href="https://doi.org/10.2793/4687161" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
                 </li>
                 <li>
-                    <strong>Designing a Global Weather Station Network</strong><br>
-                    <span class="pub-authors">S. Keppas, H. Balis, <strong>I. Dravilas</strong>, J. Pagonis.</span>
-                    <em>EGU General Assembly, 2024.</em> <a href="https://doi.org/10.5194/egusphere-egu24-9241" target="_blank">[DOI]</a>
+                    <div class="pub-title">Designing a Global Weather Station Network</div>
+                    <div class="pub-authors">S. Keppas, H. Balis, <strong>I. Dravilas</strong>, J. Pagonis.</div>
+                    <div class="pub-meta"><span>EGU General Assembly, 2024.</span> <a href="https://doi.org/10.5194/egusphere-egu24-9241" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
                 </li>
                 <li>
-                    <strong>Towards a Machine Learning Snowfall Retrieval Algorithm for GPM-IMERG</strong><br>
-                    <span class="pub-authors"><strong>I. Dravilas</strong>, S. Dafis, G. Kyros, K. Lagouvardos, M. Koubarakis.</span>
-                    <em>Environmental Sciences Proceedings, 2023.</em> <a href="https://doi.org/10.3390/environsciproc2023026103" target="_blank">[DOI]</a>
+                    <div class="pub-title">Towards a Machine Learning Snowfall Retrieval Algorithm for GPM-IMERG</div>
+                    <div class="pub-authors"><strong>I. Dravilas</strong>, S. Dafis, G. Kyros, K. Lagouvardos, M. Koubarakis.</div>
+                    <div class="pub-meta"><span>Environmental Sciences Proceedings, 2023.</span> <a href="https://doi.org/10.3390/environsciproc2023026103" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
                 </li>
             </ul>
-            <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">* Equal contribution</p>
+            <p class="pub-note">* Equal contribution</p>
         </section>
 
         <section id="projects">
@@ -361,7 +391,8 @@
                     <p>Developed a deep learning framework for detecting atmospheric fronts directly from satellite observations as part of my MSc thesis at the University of Amsterdam, in collaboration with EUMETSAT.</p>
                     <div class="project-links">
                         <a href="thesis.html"><i class="fa-solid fa-link"></i> Project Description</a> |
-                        <a href="https://dspace.uba.uva.nl/server/api/core/bitstreams/3a1629cb-9b83-44c2-a1ca-7b653ddefb88/content" target="_blank"><i class="fa-solid fa-file-lines"></i> Thesis</a>
+                        <a href="https://dspace.uba.uva.nl/server/api/core/bitstreams/3a1629cb-9b83-44c2-a1ca-7b653ddefb88/content" target="_blank"><i class="fa-solid fa-file-lines"></i> Thesis</a> |
+                        <a href="https://arxiv.org/abs/2610.42111" target="_blank"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
                     </div>
                 </div>
                 
