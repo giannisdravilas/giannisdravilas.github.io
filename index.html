@@ -110,7 +110,7 @@
                 <div class="profile-info">
                     <h1>Giannis Dravilas</h1>
                     <div class="alt-name">Ioannis Dravilas</div>
-                    <div class="profile-title">Data Scientist | AI & Machine Learning | Earth Observation, weather and climate</div>
+                    <div class="profile-title">AI & Machine Learning | Earth Observation, weather and climate</div>
                     <div class="profile-meta">
                         <div class="location"><i class="fa-solid fa-location-dot"></i> Amsterdam, The Netherlands</div>
                         <div class="social-links">
@@ -153,22 +153,40 @@
 
         <section id="experience">
             <h2>Work Experience</h2>
-            
+
             <div class="item">
                 <div class="item-header">
                     <span class="item-title">Data Scientist</span>
                     <span class="item-date">Nov 2022 - Dec 2025</span>
                 </div>
-                <div class="item-subtitle"><a href="https://weatherxm.com/" target="_blank">WeatherXM</a></div>
+                <div class="item-subtitle">
+                    <a href="https://weatherxm.com/" target="_blank">WeatherXM</a>
+                </div>
                 <ul class="feature-list">
-                    <li><strong>Operational Forecast Validation:</strong> Designed and developed a <a href="https://weatherxm.com/forecast-accuracy-tracking/" target="_blank">benchmarking system</a> to evaluate weather forecasts against 8,000+ real-time stations, utilising results to drive model selection.</li>
-                    <li><strong>Hyperlocal Forecasting Pipeline:</strong> Designed and engineered a <a href="https://weatherxm.com/hyperlocal-station-forecast/" target="_blank">project</a> to enhance NWP accuracy by using localised station data.</li>
-                    <li><strong>Data Quality Control (QC):</strong> Optimised <a href="https://github.com/weatherxm-network/qod/" target="_blank">Python-based QC mechanisms</a> for meteorological time-series; refactoring legacy code yielded a 50% speed improvement.</li>
-                    <li><strong>Visualisation:</strong> Built interactive dashboards and <a href="https://www.linkedin.com/posts/weatherxm_california-is-currently-facing-unprecedented-activity-7160929873874558976-Y3rL" target="_blank">visualisations</a> to communicate complex weather concepts to stakeholders and the public.</li>
-                    <li><strong>Mentorship:</strong> Mentored a junior data scientist on best practices for scientific software engineering.</li>
+                    <li><strong>Forecast Benchmarking (FACT):</strong> Designed and developed <a href="https://weatherxm.com/data/forecast-accuracy/" target="_blank">FACT (Forecast Accuracy Tracking)</a>, a system for benchmarking numerical weather prediction models against observations from 8,000+ weather stations, supporting forecast evaluation and model selection.</li>
+                    <li><strong>Hyperlocal Forecasting (MOSAIC):</strong> Developed <a href="https://weatherxm.com/hyperlocal-station-forecast/" target="_blank">WeatherXM MOSAIC</a>, a hyperlocal forecasting system that selects weather models based on their recent performance at individual stations. MOSAIC ranked first for one-day-ahead temperature accuracy in FACT's 2025 network-wide evaluation (1.37 °C MAE).</li>
+                    <li><strong>Data Quality (QoD):</strong> Refactored and optimised WeatherXM's Python-based <a href="https://github.com/weatherxm-network/qod" target="_blank">Quality of Data (QoD) mechanisms</a> for meteorological time series, achieving a 50% improvement in processing speed. These mechanisms support <a href="https://weatherxm.com/network/quality/" target="_blank">weather station data validation</a>.</li>
+                    <li><strong>Dashboards &amp; Visualisation:</strong> Built Grafana dashboards and <a href="https://www.linkedin.com/posts/weatherxm_california-is-currently-facing-unprecedented-activity-7160929873874558976-Y3rL" target="_blank">visualisations</a> to communicate forecast performance, data quality and operational insights to technical and non-technical stakeholders.</li>
+                    <li><strong>Scientific Software Engineering:</strong> Delivered modular, documented and tested Python code, including AWS S3 integration, pytest-based tests and code reviews.</li>
+                    <li><strong>Collaboration &amp; Mentorship:</strong> Collaborated closely with a meteorologist and stakeholders on requirements, evaluation and interpretation, while mentoring a junior data scientist on scientific software engineering practices.</li>
                 </ul>
                 <ul class="skills-list">
-                    <li>Python</li><li>SQL</li><li>NetCDF</li><li>GRIB2</li><li>Parquet</li><li>xarray</li><li>Docker</li><li>Git</li><li>S3</li><li>AWS Athena</li><li>Grafana</li><li>Meteorological Data</li><li>Numerical Weather Prediction</li><li>Weather Station Observations</li><li>Timeseries</li><li>Machine Learning</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>NetCDF</li>
+                    <li>GRIB2</li>
+                    <li>Parquet</li>
+                    <li>xarray</li>
+                    <li>Docker</li>
+                    <li>Git</li>
+                    <li>S3</li>
+                    <li>AWS Athena</li>
+                    <li>Grafana</li>
+                    <li>Meteorological Data</li>
+                    <li>Numerical Weather Prediction</li>
+                    <li>Weather Station Observations</li>
+                    <li>Timeseries</li>
+                    <li>Machine Learning</li>
                 </ul>
             </div>
 
@@ -177,17 +195,35 @@
                     <span class="item-title">Machine Learning Engineer Intern</span>
                     <span class="item-date">Aug 2025 - Oct 2025</span>
                 </div>
-                <div class="item-subtitle"><a href="https://eumetsat.int/" target="_blank">EUMETSAT</a> (Digital Solutions and SAF Division)</div>
+                <div class="item-subtitle">
+                    <a href="https://eumetsat.int/" target="_blank">EUMETSAT</a> (Digital Solutions and SAF Division)
+                </div>
                 <ul class="feature-list">
-                    <li><strong>AI-Factory Data Workflows:</strong> Explored concepts for data management in support of establishing AI-Factories within the context of <a href="https://destination-earth.eu/" target="_blank">Destination Earth</a>.</li>
-                    <li><strong>Deep Learning on Satellite Data:</strong> Built and trained AI models ingesting MTG satellite observations and OPERA radar data to predict radar observations, in cross-collaboration with the Remote Sensing Products Division.</li>
-                    <li><strong>Cloud-Native ML Workflows:</strong> Built AI-ready EO datasets from MTG/OPERA data on the DestinE S3 Data Lake using cloud-native Zarr pipelines, resolving I/O bottlenecks.</li>
-                    <li><strong>HPC Scalability:</strong> Scaled model training across multiple GPUs on HPC systems, utilising DDP.</li>
-                    <li><strong>MLOps:</strong> Containerised ML workflows (Docker), automated inference with Airflow, and tracked experiments with MLflow.</li>
-                    <li><strong>Scientific Communication:</strong> This work will be <a href="https://program-eumetsat2026.kuoni-congress.info/presentation/deep-learning-based-radar-reflectivity-estimation-from-mtg-fci-and-li-observations-487" target="_blank">presented</a> at the EUMETSAT Meteorological Satellite Conference 2026.</li>
+                    <li><strong>AI-Ready Data Infrastructure:</strong> Worked on AI-ready data infrastructure and machine learning workflows in the context of <a href="https://destination-earth.eu/" target="_blank">Destination Earth</a> and DestinE AI-Factories.</li>
+                    <li><strong>Deep Learning on Satellite Data:</strong> Built and trained deep learning models to estimate high-resolution radar reflectivity from Meteosat Third Generation FCI/LI observations, using OPERA radar data for supervision, in collaboration with the Remote Sensing Products Division.</li>
+                    <li><strong>Large-Scale Data Engineering:</strong> Created TB-scale AI-ready datasets in Zarr format and addressed I/O bottlenecks affecting large-scale model training and inference.</li>
+                    <li><strong>Cloud-Native ML Workflows:</strong> Worked with the Destination Earth Data Lake, including S3-based storage and compute infrastructure, to support cloud-native ML experiments using weather and Earth observation data.</li>
+                    <li><strong>Distributed Training &amp; HPC:</strong> Scaled PyTorch Distributed Data Parallel training across 64 A100 GPUs on the EuroHPC MeluXina cluster, achieving near-linear scaling.</li>
+                    <li><strong>MLOps &amp; Reproducibility:</strong> Developed reproducible ML workflows using Docker, Apache Airflow for automated inference, and MLflow for experiment tracking, with GitLab for version control and collaboration.</li>
+                    <li><strong>Scientific Communication:</strong> Contributed to work <a href="https://program-eumetsat2026.kuoni-congress.info/presentation/deep-learning-based-radar-reflectivity-estimation-from-mtg-fci-and-li-observations-487" target="_blank">presented at the EUMETSAT Meteorological Satellite Conference 2026</a>.</li>
                 </ul>
                 <ul class="skills-list">
-                    <li>Python</li><li>PyTorch</li><li>Zarr</li><li>HPC</li><li>Distributed Data Parallel</li><li>Docker</li><li>Apache Airflow</li><li>MLflow</li><li>S3</li><li>GitLab</li><li>Deep Learning</li><li>Vision Transformers</li><li>Convolutional Neural Networks</li><li>Remote Sensing</li><li>Satellite Data</li><li>Weather Radar Data</li>
+                    <li>Python</li>
+                    <li>PyTorch</li>
+                    <li>Zarr</li>
+                    <li>HPC</li>
+                    <li>Distributed Data Parallel</li>
+                    <li>Docker</li>
+                    <li>Apache Airflow</li>
+                    <li>MLflow</li>
+                    <li>S3</li>
+                    <li>GitLab</li>
+                    <li>Deep Learning</li>
+                    <li>Vision Transformers</li>
+                    <li>Convolutional Neural Networks</li>
+                    <li>Remote Sensing</li>
+                    <li>Satellite Data</li>
+                    <li>Weather Radar Data</li>
                 </ul>
             </div>
 
@@ -196,11 +232,13 @@
                     <span class="item-title">Software Engineer / Independent Consultant</span>
                     <span class="item-date">Dec 2023 - Sep 2024</span>
                 </div>
-                <div class="item-subtitle"><a href="https://innov-acts.com/" target="_blank">INNOV-ACTS</a> for the <a href="https://eurohypercon.eu/" target="_blank">EuroHyPerCon project</a></div>
+                <div class="item-subtitle">
+                    <a href="https://innov-acts.com/" target="_blank">Innov-acts</a> for the <a href="https://eurohypercon.eu/" target="_blank">EuroHyPerCon project</a>
+                </div>
                 <ul class="feature-list">
-                    <li>Focused on the connectivity requirements and network design for High-Performance Computing (HPC) systems in Europe.</li>
-                    <li>Conducted in-depth analysis of unstructured text data, exploring trends and deriving actionable insights.</li>
-                    <li>Used visualisation techniques to effectively communicate key findings to stakeholders.</li>
+                    <li><strong>EuroHyPerCon Project:</strong> Contributed as an independent consultant to EuroHyPerCon, a EuroHPC JU-funded initiative focused on connectivity requirements and network design for high-performance computing systems in Europe.</li>
+                    <li><strong>Unstructured Data Analysis:</strong> Analysed unstructured text data to identify trends, requirements and actionable insights related to HPC connectivity and infrastructure planning.</li>
+                    <li><strong>Visualisation &amp; Reporting:</strong> Developed visualisations and summaries to communicate technical findings clearly to project stakeholders. The project's <a href="https://op.europa.eu/en/publication-detail/-/publication/122922c3-fd63-11ef-b7db-01aa75ed71a1/language-en" target="_blank">final report</a> was published by the Publications Office of the European Union.</li>
                 </ul>
             </div>
 
@@ -211,22 +249,34 @@
                 </div>
                 <div class="item-subtitle">PROBOTEK PC</div>
                 <ul class="feature-list">
-                    <li>Provided early-stage data scoping and methodology design for a Climate Risk Assessment Platform.</li>
+                    <li><strong>Climate Risk Assessment:</strong> Contributed to early-stage data scoping and methodology design for a Climate Risk Assessment Platform.</li>
                 </ul>
             </div>
         </section>
 
         <section id="education">
             <h2>Education</h2>
+
             <div class="item">
                 <div class="item-header">
                     <span class="item-title">MSc in Artificial Intelligence</span>
-                    <span class="item-date">Sep 2024 - Jun 2026</span>
+                    <span class="item-date">Aug 2024 - Aug 2026</span>
                 </div>
-                <div class="item-subtitle"><a href="https://uva.nl/en" target="_blank">University of Amsterdam</a></div>
+                <div class="item-subtitle">
+                    <a href="https://uva.nl/en" target="_blank">University of Amsterdam</a>
+                </div>
                 <ul class="feature-list">
-                    <li><a href="https://dspace.uba.uva.nl/server/api/core/bitstreams/3a1629cb-9b83-44c2-a1ca-7b653ddefb88/content" target="_blank">Thesis</a>: <em>SATFRONT: Detecting Atmospheric Fronts from Satellite Data using Deep Learning</em>, in collaboration with EUMETSAT. Supervisors: Miruna Stoicescu, <a href="https://scholar.google.com/citations?user=sGTlCGsAAAAJ&hl=en" target="_blank">Roope Tervo</a>, Carlos Horn, Oriol Hinojo Comellas, <a href="https://scholar.google.com/citations?user=oEhF4KEAAAAJ&hl=en" target="_blank">Sina Montazeri</a>, <a href="https://scholar.google.com/citations?user=upNHWNsAAAAJ&hl=en" target="_blank">Andrea Meraner</a> (EUMETSAT); <a href="https://a-lucic.github.io/" target="_blank">Ana Lučić</a> (UvA).</li>
-                    <li>Research outputs: Two journal submissions in the area of Vision Transformers (<a href="https://arxiv.org/abs/2603.25803" target="_blank">1</a>, <a href="https://openreview.net/forum?id=QeERUU3GEB" target="_blank">2</a>), one submission in Information Retrieval (under review), one accepted <a href="https://doi.org/10.1109/PacificVis68791.2026.00041" target="_blank">paper</a> in Human-Computer Interaction.</li>
+                    <li>
+                        <strong>Thesis:</strong> <a href="https://dspace.uba.uva.nl/server/api/core/bitstreams/3a1629cb-9b83-44c2-a1ca-7b653ddefb88/content" target="_blank"><em>SATFRONT: Detecting Atmospheric Fronts from Satellite Data using Deep Learning</em></a> (<a href="https://arxiv.org/abs/2610.42111" target="_blank">arXiv</a>), in collaboration with EUMETSAT.
+                        <ul>
+                            <li>Developed a Swin-UNet to detect cold, warm and occluded fronts from GEO-Ring satellite observations, trained on analyses from five European meteorological services.</li>
+                            <li>Built an 18 TB AI-ready GEO-Ring/ERA5 dataset using Zarr and S3 on Destination Earth, plus a web demo producing near-real-time frontal analyses every 30 minutes.</li>
+                        </ul>
+                        Supervisors: Miruna Stoicescu, <a href="https://scholar.google.com/citations?user=sGTlCGsAAAAJ&hl=en" target="_blank">Roope Tervo</a>, Carlos Horn, Oriol Hinojo Comellas, <a href="https://scholar.google.com/citations?user=oEhF4KEAAAAJ&hl=en" target="_blank">Sina Montazeri</a>, <a href="https://scholar.google.com/citations?user=upNHWNsAAAAJ&hl=en" target="_blank">Andrea Meraner</a> (EUMETSAT); <a href="https://a-lucic.github.io/" target="_blank">Ana Lučić</a> (UvA).
+                    </li>
+                    <li>
+                        <strong>Research &amp; Publications:</strong> An <a href="https://arxiv.org/abs/2610.42111" target="_blank">arXiv preprint</a> on atmospheric front detection, two journal submissions on Vision Transformers (<a href="https://arxiv.org/abs/2603.25803" target="_blank">1</a>, <a href="https://openreview.net/forum?id=QeERUU3GEB" target="_blank">2</a>), one Information Retrieval submission (under review), and a Human-Computer Interaction <a href="https://doi.org/10.1109/PacificVis68791.2026.00041" target="_blank">paper</a> presented at IEEE PacificVis 2026.
+                    </li>
                 </ul>
             </div>
 
@@ -235,10 +285,17 @@
                     <span class="item-title">BSc in Informatics and Telecommunications</span>
                     <span class="item-date">Sep 2019 - Jul 2023</span>
                 </div>
-                <div class="item-subtitle"><a href="https://www.di.uoa.gr/en" target="_blank">National and Kapodistrian University of Athens</a></div>
+                <div class="item-subtitle">
+                    <a href="https://www.di.uoa.gr/en" target="_blank">National and Kapodistrian University of Athens</a>
+                </div>
                 <ul class="feature-list">
-                    <li><a href="https://pergamos.lib.uoa.gr/uoa/dl/object/3338966/file.pdf" target="_blank">Thesis</a>: <em>Machine Learning Snowfall Retrieval Algorithms for Satellite Precipitation Estimates</em>, in collaboration with IERSD/NOA. Supervisors: <a href="https://cgi.di.uoa.gr/~koubarak/" target="_blank">Manolis Koubarakis</a> (NKUA); <a href="https://scholar.google.com/citations?user=HrfZWgEAAAAJ&hl=en" target="_blank">Stavros Dafis</a>, <a href="https://scholar.google.com/citations?user=PNfCK7oAAAAJ&hl=en" target="_blank">Georgios Kyros</a>, <a href="https://scholar.google.com/citations?user=Sph98NkAAAAJ&hl=en" target="_blank">Kostas Lagouvardos</a> (NOA).</li>
-                    <li>Thesis grade: 10/10 - selected for the annual <a href="https://www.di.uoa.gr/sites/default/files/documents/Studbook2024.pdf" target="_blank">e-book</a> showcasing top theses from the Department, resulted in a peer-reviewed <a href="https://www.mdpi.com/2673-4931/26/1/103" target="_blank">publication</a>.</li>
+                    <li>
+                        <strong>Thesis:</strong> <a href="https://pergamos.lib.uoa.gr/uoa/dl/object/3338966/file.pdf" target="_blank"><em>Machine Learning Snowfall Retrieval Algorithms for Satellite Precipitation Estimates</em></a>, developed in collaboration with IERSD/NOA.
+                        <ul>
+                            <li>Selected for the department's annual <a href="https://www.di.uoa.gr/sites/default/files/documents/Studbook2024.pdf" target="_blank">e-book</a> showcasing outstanding theses and resulted in a peer-reviewed <a href="https://www.mdpi.com/2673-4931/26/1/103" target="_blank">publication</a>.</li>
+                        </ul>
+                        Supervisors: <a href="https://cgi.di.uoa.gr/~koubarak/" target="_blank">Manolis Koubarakis</a> (NKUA); <a href="https://scholar.google.com/citations?user=HrfZWgEAAAAJ&hl=en" target="_blank">Stavros Dafis</a>, <a href="https://scholar.google.com/citations?user=PNfCK7oAAAAJ&hl=en" target="_blank">Georgios Kyros</a>, <a href="https://scholar.google.com/citations?user=Sph98NkAAAAJ&hl=en" target="_blank">Kostas Lagouvardos</a> (NOA).
+                    </li>
                 </ul>
             </div>
         </section>
@@ -247,13 +304,9 @@
             <h2>Publications & Research</h2>
             <ul class="pub-list">
                 <li>
-                    <strong>SATFRONT: Detecting Atmospheric Fronts from Satellite Data using Deep Learning</strong><br>
-                    <span class="pub-authors"><strong>I. Dravilas</strong>.</span>
-                    <em>MSc Thesis, University of Amsterdam, in collaboration with EUMETSAT.</em>
-                    <a href="https://dspace.uba.uva.nl/server/api/core/bitstreams/3a1629cb-9b83-44c2-a1ca-7b653ddefb88/content" target="_blank">[Thesis]</a><br>
-                    <span class="pub-authors">
-                        Supervisors: Miruna Stoicescu, Roope Tervo, Carlos Horn, Oriol Hinojo Comellas, Sina Montazeri, Andrea Meraner (EUMETSAT); Ana Lučić (UvA).
-                    </span>
+                    <strong>SATFRONT: Detecting Atmospheric Fronts with Satellite Data using Machine Learning</strong><br>
+                    <span class="pub-authors"><strong>I. Dravilas</strong>, M. Stoicescu, R. Tervo, C. Horn, O. Hinojo Comellas, S. Montazeri, A. Meraner, A. Lucic.</span>
+                    <em>arXiv preprint, 2026.</em> <a href="https://arxiv.org/abs/2610.42111" target="_blank">[arXiv]</a>
                 </li>
                 <li>
                     <strong>Deep Learning-Based Radar Reflectivity Estimation from MTG-FCI and LI Observations</strong><br>
