@@ -388,62 +388,62 @@
 
                 <div class="project-card">
                     <div class="project-title">SATFRONT: Atmospheric Front Detection from Satellite Data</div>
-                    <p>Developed a deep learning framework for detecting atmospheric fronts directly from satellite observations as part of my MSc thesis at the University of Amsterdam, in collaboration with EUMETSAT.</p>
+                    <p>Developed SATFRONT, a framework for detecting cold, warm and occluded atmospheric fronts from geostationary satellite observations, with optional ERA5 inputs. Built an 18 TB AI-ready dataset incorporating frontal analyses from five European meteorological services, and deployed near-real-time inference and visualisation workflows on Destination Earth. Conducted as an MSc thesis at the University of Amsterdam in collaboration with <a href="https://www.eumetsat.int/" target="_blank">EUMETSAT</a>.</p>
                     <div class="project-links">
-                        <a href="thesis.html"><i class="fa-solid fa-link"></i> Project Description</a> |
+                        <a href="thesis.html"><i class="fa-solid fa-link"></i> Description</a> |
                         <a href="https://dspace.uba.uva.nl/server/api/core/bitstreams/3a1629cb-9b83-44c2-a1ca-7b653ddefb88/content" target="_blank"><i class="fa-solid fa-file-lines"></i> Thesis</a> |
-                        <a href="https://arxiv.org/abs/2610.42111" target="_blank"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
+                        <a href="https://arxiv.org/abs/2610.42111" target="_blank"><i class="fa-solid fa-file-pdf"></i> arXiv</a> |
+                        <a href="https://arxiv.org/abs/2611.08148" target="_blank"><i class="fa-solid fa-file-lines"></i> NeurIPS Workshop</a>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-title">Snowly.eu</div>
-                    <p>Built a web application with interactive 2D and 3D snowfall forecast maps for Europe, based on downscaled NWP models in 400 m spatial resolution.</p>
-                    <div class="project-links"><a href="https://snowly.eu/" target="_blank"><i class="fa-solid fa-link"></i> snowly.eu</a></div>
+                    <div class="project-title">Snowly.eu: High-Resolution Snowfall Forecasting</div>
+                    <p>Developed and deployed a terrain-aware NWP downscaling model at 400 m resolution across Europe, engineering end-to-end forecast pipelines with automated twice-daily updates and interactive 2D/3D visualisations.</p>
+                    <div class="project-links">
+                        <a href="https://snowly.eu/" target="_blank"><i class="fa-solid fa-link"></i> snowly.eu</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-title">AI Models for MTG Satellite &amp; OPERA Radar Data</div>
-                    <p>Built deep learning models mapping satellite observations to radar grids. Created TB-scale AI-ready Zarr datasets, scaled PyTorch DDP training on EuroHPC, and developed reproducible workflows with Docker, MLflow and Apache Airflow in Destination Earth.</p>
+                    <div class="project-title">MTG FCI/LI Radar Reflectivity Estimation</div>
+                    <p>At <a href="https://www.eumetsat.int/" target="_blank">EUMETSAT</a>, developed deep learning models to estimate high-resolution radar reflectivity from MTG FCI/LI satellite observations using OPERA radar supervision. Achieved near-linear PyTorch DDP scaling across 64 A100 GPUs on EuroHPC MeluXina, built TB-scale Zarr datasets and engineered reproducible Docker/MLflow/Airflow workflows in Destination Earth.</p>
                     <div class="project-links">
-                        <a href="https://www.eumetsat.int/features/inside-meteosat-third-generation-meet-alessandro-burini#:~:text=The%20Leveraging%20AI,destroyed%20or%20incapacitated." target="_blank"><i class="fa-brands fa-github"></i> EUMETSAT</a> | 
                         <a href="https://program-eumetsat2026.kuoni-congress.info/presentation/deep-learning-based-radar-reflectivity-estimation-from-mtg-fci-and-li-observations-487" target="_blank"><i class="fa-solid fa-file-lines"></i> Conference Abstract</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-title">Forecast Accuracy Tracking</div>
-                    <p>Designed and implemented a system to evaluate the accuracy of multiple weather models, using observational data from 8,000 WeatherXM weather stations.</p>
-                    <div class="project-links"><a href="https://weatherxm.com/forecast-accuracy-tracking/" target="_blank"><i class="fa-solid fa-link"></i> WeatherXM</a></div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-title">Hyperlocal Forecasting</div>
-                    <p>Developed a system to improve site-level weather predictions by combining NWP model outputs with real-time observational data from WeatherXM stations.</p>
+                    <div class="project-title">Forecast Accuracy Tracking (FACT)</div>
+                    <p>Designed and developed FACT, a forecast benchmarking system evaluating NWP models against observations from 8,000+ WeatherXM stations, supporting forecast accuracy assessment and model selection.</p>
                     <div class="project-links">
-                        <a href="https://weatherxm.com/hyperlocal-station-forecast/" target="_blank"><i class="fa-solid fa-link"></i> WeatherXM</a>
+                        <a href="https://weatherxm.com/data/forecast-accuracy/" target="_blank"><i class="fa-solid fa-link"></i> WeatherXM FACT</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-title">Quality of Weather Data Mechanism</div>
-                    <p>Refactored and optimised all the quality of data mechanisms used at WeatherXM, resulting in a 50% speed improvement.</p>
-                    <div class="project-links"><a href="https://github.com/weatherxm-network/qod" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+                    <div class="project-title">MOSAIC: Hyperlocal Forecasting</div>
+                    <p>Developed MOSAIC, an adaptive forecasting model selecting NWP predictions based on recent station-level performance. Ranked first for next-day temperature accuracy in FACT's 2025 network-wide evaluation (1.37 °C MAE).</p>
+                    <div class="project-links">
+                        <a href="https://weatherxm.com/hyperlocal-station-forecast/" target="_blank"><i class="fa-solid fa-link"></i> WeatherXM MOSAIC</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-title">InfoCIR Dashboard</div>
-                    <p>Developed InfoCIR, a modular Plotly-Dash visual analytics dashboard that integrates multimodal composed image retrieval (CIR) models into an interactive prompt-engineering and debugging system.</p>
+                    <div class="project-title">WeatherXM Quality of Data (QoD)</div>
+                    <p>Refactored and optimised Python-based quality-control mechanisms for meteorological time series, achieving a 50% processing speed improvement and introducing pytest-based testing practices.</p>
                     <div class="project-links">
-                        <a href="https://github.com/giannisdravilas/InfoCIR" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a> | 
-                        <a href="https://doi.org/10.1109/PacificVis68791.2026.00041" target="_blank"><i class="fa-solid fa-file-lines"></i> Paper</a>
+                        <a href="https://github.com/weatherxm-network/qod" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-title">Snow Forecasting Model</div>
-                    <p>Developed a high-resolution, post-processing, rule-based snow forecasting model for Greece in Python using downscaling techniques.</p>
-                    <div class="project-links"><a href="snow_forecasting_model.html"><i class="fa-solid fa-link"></i> Learn More</a></div>
+                    <p>Developed a terrain-aware snowfall forecasting model for Greece at 400 m resolution, using 3D atmospheric profiles and high-resolution topography to post-process NWP forecasts. Operationally used by Weatherathens since 2022.</p>
+                    <div class="project-links">
+                        <a href="snow_forecasting_model.html"><i class="fa-solid fa-link"></i> Learn More</a> |
+                        <a href="https://giannisdravilas.github.io/weatherathens_snow_model_maps.html" target="_blank"><i class="fa-solid fa-map"></i> Operational Forecasts</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -456,7 +456,7 @@
                     <div class="project-title">Reproducibility Study: FairViT</div>
                     <p>Reproduced and evaluated the FairViT model's fairness and efficiency claims on two datasets, revealing limitations in adaptive masking.</p>
                     <div class="project-links">
-                        <a href="https://anonymous.4open.science/r/FairViT-reproducibility-study-54B0/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a> | 
+                        <a href="https://anonymous.4open.science/r/FairViT-reproducibility-study-54B0/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a> |
                         <a href="https://openreview.net/forum?id=QeERUU3GEB" target="_blank"><i class="fa-solid fa-link"></i> OpenReview</a>
                     </div>
                 </div>
